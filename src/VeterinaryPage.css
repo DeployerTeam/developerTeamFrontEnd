@@ -1,0 +1,33 @@
+.header {
+    overflow: hidden;
+    background-color: #333;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+  
+.header a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+  
+.header a:hover {
+    background: #ddd;
+    color: rgb(0, 0, 0);
+}
+
+.mainImage {
+    position: absolute;
+    top: 10%;
+}
+
+.searchBox {
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 20%;
+}
