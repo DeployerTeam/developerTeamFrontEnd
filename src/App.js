@@ -4,6 +4,9 @@ import './App.css';
 import {SearchProductStore} from './SearchProductStore';
 import {ProductStore} from './ProductStore';
 import {ProductListStore} from './ProductListStore';
+import {AddProductStore} from './AddProductStore';
+import {OwnerStoreView} from './OwnerStoreView';
+import {ClientStoreView} from './ClientStoreView';
 
 function App() {
 
@@ -15,11 +18,15 @@ function App() {
                 {name: "Product6", price: 50005, description: "Comida"},
                 {name: "Product7", price: 50006, description: "Comida"},
                 {name: "Product8", price: 50007, description: "Comida"},
-                {name: "Product9", price: 50008, description: "Comida"},];
+                {name: "Product9", price: 50008, description: "Comida"},
+                {name: "Product10", price: 50009, description: "Comida"},];
   return (
     <div className="App">
-      <SearchProductStore />
+      {/* <OwnerStoreView /> */}
+      <ClientStoreView />
+
       <ProductListStore products={test}> </ProductListStore>
+
     </div>
   );
 }
