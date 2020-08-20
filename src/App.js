@@ -1,12 +1,13 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import {VeterinaryPage} from './VeterinaryPage'
+import {VeterinaryClientPage} from './VeterinaryClientPage'
+import {VeterinaryOwnerPage} from './VetrinaryOwnerPage'
 
 function App() {
   return (
     <div className="App">
-      <VeterinaryPage />
+      <VeterinaryClientPage />
     </div>
   );
 }

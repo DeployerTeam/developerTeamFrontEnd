@@ -1,7 +1,8 @@
 import React from 'react';
-import './VeterinaryPage.css';
+import './VeterinaryClientPage.css';
+import './Header.css';
 
-export class VeterinaryPage extends React.Component{
+export class VeterinaryClientPage extends React.Component{
   constructor(props) {
     super(props);
     this.state = {
@@ -28,6 +29,10 @@ export class VeterinaryPage extends React.Component{
 
             <div className="header">
                 <a>Appet</a>
+                <a>Adoption</a>
+                <a>Veterinary</a>
+                <a>Products</a>
+
             </div>
 
             <div className="mainImage">
