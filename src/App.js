@@ -1,12 +1,12 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import {SearchProductStore} from './SearchProductStore';
-import {ProductStore} from './ProductStore';
-import {ProductListStore} from './ProductListStore';
-import {AddProductStore} from './AddProductStore';
-import {OwnerStoreView} from './OwnerStoreView';
-import {ClientStoreView} from './ClientStoreView';
+import {SearchProductStore} from './components/storecomponents/SearchProductStore';
+import {ProductStore} from './components/storecomponents/ProductStore';
+import {ProductListStore} from './components/storecomponents/ProductListStore';
+import {AddProductStore} from './components/storecomponents/AddProductStore';
+import {OwnerStoreView} from './components/storecomponents/OwnerStoreView';
+import {ClientStoreView} from './components/storecomponents/ClientStoreView';
 
 function App() {
 
