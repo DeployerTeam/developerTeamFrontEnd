@@ -1,5 +1,7 @@
 import React from 'react';
 
+import Header from '../headerComponent/header';
+
 import './main.css';
 
 export default class Main extends React.Component{
@@ -10,20 +12,10 @@ export default class Main extends React.Component{
         return (
             <React.Fragment>
                 <div style={{height: + window.screen.height}} className="container main">
-                    
-                    <div className="row header">
-                        <div className="col-12 col-md-3">
-                            <img src="https://www.businesstimes.com.sg/sites/default/files/styles/680x453/public/image/2020/01/11/BT_20200111_PG1BRUNCHREVISE_4002715-1.jpg?itok=stIHxRYg"
-                            className = "img-thumbnail rounded-circle " />
-                        </div>
-                        <div className="col-12 col-md-9">
-                            <ul className="float-right nav">
-                                <li className="nav-item"><a href="/">Home</a></li>
-                                <li className="nav-item"><a href="/signIn">SignIn</a></li>
-                                <li className="nav-item"><a href="/signUp">SignUp</a></li>
-                            </ul>
-                        </div>
+                    <div className="row">
+                        <Header/>
                     </div>
+                    
                     <div className="row body">
                         <a className="col-12 col-md-4 sect" href="/adoption"><div >
                             <h1>ADOPTION</h1>
