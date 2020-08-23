@@ -11,7 +11,7 @@ export default class Main extends React.Component{
     render(){
         return (
             <React.Fragment>
-                <div style={{height: + window.screen.height}} className="container main">
+                <div className="container main">
                     <div className="row">
                         <Header/>
                     </div>
