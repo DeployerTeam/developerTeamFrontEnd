@@ -8,11 +8,13 @@ import $ from 'jquery';
 import Popper from 'popper.js';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import Main from './components/main/Main';
+import Router from './routes/index'
 
 ReactDOM.render(
   <React.StrictMode>
     {/* <App /> */}
-    <Main/>
+    {/* <Main/> */}
+    <Router/>
   </React.StrictMode>,
   document.getElementById('root')
 );

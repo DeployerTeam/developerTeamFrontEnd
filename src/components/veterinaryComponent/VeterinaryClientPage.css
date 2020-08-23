@@ -1,0 +1,10 @@
+.mainImage {
+    position: absolute;
+    top: 10%;
+}
+
+.searchBox {
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 20%;
+}
