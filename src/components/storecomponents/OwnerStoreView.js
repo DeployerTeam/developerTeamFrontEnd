@@ -1,7 +1,7 @@
 import React from 'react';
 import {ProductListStore} from './ProductListStore';
 import {AddProductStore} from './AddProductStore';
-export class OwnerStoreView extends React.Component {
+export default class OwnerStoreView extends React.Component {
   constructor(props) {
     super(props);
   }

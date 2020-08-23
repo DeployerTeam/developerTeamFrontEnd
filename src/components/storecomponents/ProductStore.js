@@ -1,7 +1,8 @@
-import React from 'react';
+import React, {Component} from 'react';
 
 
-export class ProductStore extends React.Component{
+export class ProductS extends Component{
+
   constructor(props){
     super(props);
   }
@@ -25,3 +26,5 @@ export class ProductStore extends React.Component{
   }
 
 }
+
+

@@ -2,7 +2,7 @@ import React from 'react';
 import './VeterinaryOwnerPage.css';
 import './Header.css';
 
-export class VeterinaryOwnerPage extends React.Component{
+export default class VeterinaryOwnerPage extends React.Component{
   constructor(props) {
     super(props);
     this.state = {

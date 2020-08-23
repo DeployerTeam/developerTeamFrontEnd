@@ -1,6 +1,6 @@
 import React from 'react';
 import {SearchProductStore} from './SearchProductStore';
-export class ClientStoreView extends React.Component{
+export default class ClientStoreView extends React.Component{
   constructor(props) {
     super(props);
 

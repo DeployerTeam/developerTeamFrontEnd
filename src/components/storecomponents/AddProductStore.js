@@ -1,5 +1,5 @@
 import React from 'react';
-export class AddProductStore extends React.Component {
+export default class AddProductStore extends React.Component {
   constructor(props){
     super(props);
     this.state = {
