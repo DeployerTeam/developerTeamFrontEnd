@@ -21,13 +21,13 @@ a:link, a:visited, a:active {
 }
 
 .main{
-    background: #B1E5F6;
+    background: white;
     height: 100%;
 }
 
 .sect{
     height: 300px;
-    background: #CBDADF;
+    background: white;
     padding: 50px;
     margin-top: 70px;
     border-color: black;
