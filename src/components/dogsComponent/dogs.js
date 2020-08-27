@@ -6,18 +6,24 @@ import Dashboard from '../formularioAdopcion/dashboard';
 
 export default class Dogs extends React.Component {
 
-    
-    
+
+
     render() {
         return (
             <React.Fragment>
                 
                 <div style={{height: + window.screen.height}} className="container">
+                    <br/>
+                    <br/>
+                    <br/>
+                    <div className="row header">
+
                     
                     <div className="row">
+
                         <Header />
                     </div>
-                    
+
                     <div className="botonStyle" >
                         <a href="/main">
                             <button id="color" className={"btn btn-outline btn-light btn-block "}>Interested in giving in adoption</button>
