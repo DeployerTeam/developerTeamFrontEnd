@@ -6,3 +6,18 @@
     border-width: 1px;
     border-style: solid;
 }
+
+
+.root {
+
+  min-width: 100vw;
+  
+}
+
+.menuButton {
+  marginRight: theme.spacing(2),
+}
+
+.title {
+  padding-right: 65%;
+}

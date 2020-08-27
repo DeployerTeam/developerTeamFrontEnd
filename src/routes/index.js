@@ -8,7 +8,7 @@ import Dogs from '../components/dogsComponent/dogs';
 import SignUp from '../components/signup/SignUp';
 import VeterinaryOwnerPage from '../components/veterinaryComponent/VetrinaryOwnerPage';
 import ProductListStore from '../components/storecomponents/ProductListStore';
-
+import Profile from '../components/profile/Profile';
 
 const test = [{name: "Product1", price: 50000, description: "Comida"},
 {name: "Product2", price: 50001, description: "Comida"},
@@ -31,6 +31,7 @@ export default () => (
             <Route path="/adoption" exact component={Dogs} />
             <Route path="/veterinary" exact component={VeterinaryOwnerPage} />
             <Route path="/store" exact component={ProductListStore}/>
+            <Route path="/profile" exact component={Profile}/>
         </Switch>
     </Router>
 )
