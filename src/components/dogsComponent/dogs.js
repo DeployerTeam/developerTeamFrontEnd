@@ -2,19 +2,28 @@ import React from 'react';
 
 import Header from '../headerComponent/header';
 import './dogs.css';
+import Dashboard from '../formularioAdopcion/dashboard';
 
 export default class Dogs extends React.Component {
 
-    
-    
+
+
     render() {
         return (
             <React.Fragment>
+                
                 <div style={{height: + window.screen.height}} className="container">
+                    <br/>
+                    <br/>
+                    <br/>
                     <div className="row header">
+
+                    
+                    <div className="row">
+
                         <Header />
                     </div>
-                    
+
                     <div className="botonStyle" >
                         <a href="/main">
                             <button id="color" className={"btn btn-outline btn-light btn-block "}>Interested in giving in adoption</button>
@@ -29,6 +38,7 @@ export default class Dogs extends React.Component {
                             <div className="card-body">
                                 <h4 className="card-title">Luke</h4>
                                 <a href="/dogProfile" className="btn btn-warning">See Profile</a>
+                                <Dashboard/>
                             </div>
                         </div>
 
@@ -37,6 +47,7 @@ export default class Dogs extends React.Component {
                             <div className="card-body">
                                 <h4 className="card-title">Rex</h4>
                                 <a href="/dogProfile" className="btn btn-warning">See Profile</a>
+                                <Dashboard/>
                             </div>
                         </div>
 
@@ -45,6 +56,7 @@ export default class Dogs extends React.Component {
                             <div className="card-body">
                                 <h4 className="card-title">Haku</h4>
                                 <a href="/dogProfile" className="btn btn-warning">See Profile</a>
+                                <Dashboard/>
                             </div>
                         </div>
 
@@ -53,6 +65,7 @@ export default class Dogs extends React.Component {
                             <div className="card-body">
                                 <h4 className="card-title">Bolt</h4>
                                 <a href="/dogProfile" className="btn btn-warning">See Profile</a>
+                                <Dashboard/>
                             </div>
                         </div>
                     </div>

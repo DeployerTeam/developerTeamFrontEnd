@@ -5,11 +5,13 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Main from '../components/main/Main';
 import Login from '../components/login/Login';
 import Dogs from '../components/dogsComponent/dogs';
+import DogProfile from '../components/dogProfileComponent/dogProfile';
 import SignUp from '../components/signup/SignUp';
 import VeterinaryOwnerPage from '../components/veterinaryComponent/VetrinaryOwnerPage';
 import ProductListStore from '../components/storecomponents/ProductListStore';
 import DogProfile from '../components/dogProfileComponent/dogProfile';
 
+import Profile from '../components/profile/Profile';
 
 const test = [{name: "Product1", price: 50000, description: "Comida"},
 {name: "Product2", price: 50001, description: "Comida"},
@@ -22,6 +24,9 @@ const test = [{name: "Product1", price: 50000, description: "Comida"},
 {name: "Product9", price: 50008, description: "Comida"},
 {name: "Product10", price: 50009, description: "Comida"}];
 
+import DonorProfile from '../components/donorProfileComponent/DonorProfile';
+
+
 
 export default () => (
     <Router>
@@ -30,9 +35,11 @@ export default () => (
             <Route path="/signIn" exact component={Login} />
             <Route path="/signUp" exact component={SignUp} />
             <Route path="/adoption" exact component={Dogs} />
+            <Route path="/dogProfile" exact component={DogProfile}/>
             <Route path="/veterinary" exact component={VeterinaryOwnerPage} />
             <Route path="/store" exact component={ProductListStore}/>
-            <Route path="/dogProfile" exact component={DogProfile}/>
+            <Route path="/profile" exact component={Profile}/>
+
         </Switch>
     </Router>
 )

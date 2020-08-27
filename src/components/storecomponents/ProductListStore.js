@@ -17,9 +17,10 @@ export default class ProductListStore extends React.Component{
     {name: "Product8", price: 50007, description: "Comida"},
     {name: "Product9", price: 50008, description: "Comida"},
     {name: "Product10", price: 50009, description: "Comida"}];
+    
     const productList = products.map((product, index) => {
       return <ProductS key={index} name={product.name} price={product.price} description={product.description}/>
-      // return "";
+      
     });
 
     return(

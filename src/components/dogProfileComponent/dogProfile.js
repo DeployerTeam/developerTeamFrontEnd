@@ -3,6 +3,7 @@ import React from 'react';
 import Header from '../headerComponent/header';
 import './dogProfile.css';
 import Dogs from '../dogsComponent/dogs';
+import Formulario from '../formularioAdopcion/formulario';
 
 export default class DogProfile extends React.Component {
 
@@ -10,7 +11,7 @@ export default class DogProfile extends React.Component {
         return(
             <React.Fragment>
                 <div style={{height: + window.screen.height}} className="container">
-                    <div className="row header">
+                    <div className="row">
                         <Header />
                     </div>
                     <br/>
@@ -28,7 +29,10 @@ export default class DogProfile extends React.Component {
                         </div>                     
                     </div>
                     <div className="botonStyle2">
-                        <a href="/adoption" id="color" className="btn btn">Adopt</a>
+                        <a href="/adoptForm" id="color" className="btn btn">Adopt</a>
+                    </div>
+                    <div className="botonStyle2">
+                        <a href="/donation" id="color" className="btn btn">Donate to foundation</a>
                     </div>
                 </div>
                 
