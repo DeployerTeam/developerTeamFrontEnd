@@ -11,16 +11,11 @@ export default class Dogs extends React.Component {
     render() {
         return (
             <React.Fragment>
-                
                 <div style={{height: + window.screen.height}} className="container">
-                    <br/>
-                    <br/>
-                    <br/>
-                    <div className="row header">
-
-                    
+                    <br></br>
+                    <br></br>
+                    <br></br>
                     <div className="row">
-
                         <Header />
                     </div>
 
@@ -29,12 +24,12 @@ export default class Dogs extends React.Component {
                             <button id="color" className={"btn btn-outline btn-light btn-block "}>Interested in giving in adoption</button>
                         </a>
                     </div>
-                    <br />
-                    <br />
-                    <br />
+                    <br ></br>
+                    <br ></br>
+                    <br ></br>
                     <div className="row body wrapper">
                         <div className="card menuCard">
-                            <img className="card-img-top" src="https://perritos882.files.wordpress.com/2016/12/cropped-imagenes-de-perritos-11.jpg" alt="Card image" height="185px"/>
+                            <img className="card-img-top" src="https://perritos882.files.wordpress.com/2016/12/cropped-imagenes-de-perritos-11.jpg" alt="Card image" height="185px"></img>
                             <div className="card-body">
                                 <h4 className="card-title">Luke</h4>
                                 <a href="/dogProfile" className="btn btn-warning">See Profile</a>
@@ -71,6 +66,7 @@ export default class Dogs extends React.Component {
                     </div>
                 </div>
             </React.Fragment>
+            
         );
     }
 
