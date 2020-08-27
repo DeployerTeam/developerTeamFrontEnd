@@ -9,6 +9,7 @@ import DogProfile from '../components/dogProfileComponent/dogProfile';
 import SignUp from '../components/signup/SignUp';
 import VeterinaryOwnerPage from '../components/veterinaryComponent/VetrinaryOwnerPage';
 import ProductListStore from '../components/storecomponents/ProductListStore';
+import DogProfile from '../components/dogProfileComponent/dogProfile';
 
 import Profile from '../components/profile/Profile';
 
@@ -37,7 +38,6 @@ export default () => (
             <Route path="/dogProfile" exact component={DogProfile}/>
             <Route path="/veterinary" exact component={VeterinaryOwnerPage} />
             <Route path="/store" exact component={ProductListStore}/>
-
             <Route path="/profile" exact component={Profile}/>
 
         </Switch>

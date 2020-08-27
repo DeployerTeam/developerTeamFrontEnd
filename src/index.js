@@ -9,12 +9,12 @@ import Popper from 'popper.js';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import Main from './components/main/Main';
 import Router from './routes/index'
+import Pagos from './components/pagos/pagos';
 
 ReactDOM.render(
   <React.StrictMode>
-    {/* <App /> */}
-    {/* <Main/> */}
-    <Router/>
+    <Pagos/>
+    {/* <Router/> */}
   </React.StrictMode>,
   document.getElementById('root')
 );
