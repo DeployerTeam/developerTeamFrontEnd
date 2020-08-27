@@ -2,6 +2,7 @@ import React from 'react';
 
 import Header from '../headerComponent/header';
 import './dogs.css';
+import Dashboard from '../formularioAdopcion/dashboard';
 
 export default class Dogs extends React.Component {
 
@@ -31,6 +32,7 @@ export default class Dogs extends React.Component {
                             <div className="card-body">
                                 <h4 className="card-title">Luke</h4>
                                 <a href="/dogProfile" className="btn btn-warning">See Profile</a>
+                                <Dashboard/>
                             </div>
                         </div>
 
@@ -39,6 +41,7 @@ export default class Dogs extends React.Component {
                             <div className="card-body">
                                 <h4 className="card-title">Rex</h4>
                                 <a href="/dogProfile" className="btn btn-warning">See Profile</a>
+                                <Dashboard/>
                             </div>
                         </div>
 
@@ -47,6 +50,7 @@ export default class Dogs extends React.Component {
                             <div className="card-body">
                                 <h4 className="card-title">Haku</h4>
                                 <a href="/dogProfile" className="btn btn-warning">See Profile</a>
+                                <Dashboard/>
                             </div>
                         </div>
 
@@ -55,6 +59,7 @@ export default class Dogs extends React.Component {
                             <div className="card-body">
                                 <h4 className="card-title">Bolt</h4>
                                 <a href="/dogProfile" className="btn btn-warning">See Profile</a>
+                                <Dashboard/>
                             </div>
                         </div>
                     </div>

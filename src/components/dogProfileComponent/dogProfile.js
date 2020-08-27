@@ -3,6 +3,7 @@ import React from 'react';
 import Header from '../headerComponent/header';
 import './dogProfile.css';
 import Dogs from '../dogsComponent/dogs';
+import Formulario from '../formularioAdopcion/formulario';
 
 export default class DogProfile extends React.Component {
 
