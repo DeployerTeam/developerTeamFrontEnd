@@ -42,9 +42,8 @@ export default class Header extends Component {
                           Appet
                       </Typography>
                       <Button href="/signIn" color="black">Login</Button>
-                      <Button href="/signUp" color="black">Register</Button>
-                      <Avatar alt="Remy Sharp" src="/public/logo192.png" ><a href="/profile" onClick={() =>  <Model />}>dsa</a></Avatar>
-                      <Button  color="black"  onClick={() => {return(<Model />)}}>Profile</Button>
+                      <Button href="/signUp" color="black">Register</Button>                      
+                      <Button  color="black"  href="/profile">Profile</Button>
                     </Toolbar>
                   </AppBar>
 
