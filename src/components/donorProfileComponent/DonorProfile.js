@@ -67,6 +67,7 @@ export default class DonorProfile extends Component{
                             onClose={this.handleClickClose}
                             TransitionComponent={Transition}
                         >
+                        
                         <AppBar >
                                 <Toolbar>
                                     <IconButton edge="start" color="inherit" onClick={this.handleClickClose} aria-label="close">
@@ -78,13 +79,17 @@ export default class DonorProfile extends Component{
 
                             </Toolbar>
                          </AppBar>
-                            <DialogTitle id="alert-dialog-title">{"Use Google's location service?"}</DialogTitle>
+
+
+
                             <DialogContent>
                                 <AdoptionRequest id={value}/>  {/* Una vez se utilice el back se usara el id de la solicitud para extraer los datos */}
+                                <Button autoFocus onClick={this.handleClickClose} color="primary">
+                                    Check as read
+                                </Button>
                             </DialogContent>
-                            <Button autoFocus onClick={this.handleClickClose} color="primary">
-                                Marcar como leido
-                            </Button>
+
+
                         </Dialog>
                     </div>
                   <ListItemAvatar>
