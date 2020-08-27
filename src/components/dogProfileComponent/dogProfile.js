@@ -10,7 +10,7 @@ export default class DogProfile extends React.Component {
         return(
             <React.Fragment>
                 <div style={{height: + window.screen.height}} className="container">
-                    <div className="row header">
+                    <div className="row">
                         <Header />
                     </div>
                     <br/>

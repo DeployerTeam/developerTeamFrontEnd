@@ -10,8 +10,10 @@ export default class Dogs extends React.Component {
     render() {
         return (
             <React.Fragment>
+                
                 <div style={{height: + window.screen.height}} className="container">
-                    <div className="row header">
+                    
+                    <div className="row">
                         <Header />
                     </div>
                     
