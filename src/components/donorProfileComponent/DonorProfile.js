@@ -7,11 +7,22 @@ import Avatar from '@material-ui/core/Avatar';
 
 import Button from '@material-ui/core/Button';
 import Dialog from '@material-ui/core/Dialog';
-import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
-import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
-import { AccordionActions } from '@material-ui/core';
+import Slide from '@material-ui/core/Slide';
+
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import IconButton from '@material-ui/core/IconButton';
+import Typography from '@material-ui/core/Typography';
+import CloseIcon from '@material-ui/icons/Close';
+
+import { AdoptionRequest } from './AdoptionRequest';
+
+
+const Transition = React.forwardRef(function Transition(props, ref) {
+    return <Slide direction="up" ref={ref} {...props} />;
+  });
 
 export default class DonorProfile extends Component{
     constructor(props){
@@ -48,19 +59,28 @@ export default class DonorProfile extends Component{
             {[0, 1, 2, 3].map((value) => {
               const labelId = `checkbox-list-secondary-label-${value}`;
               return (
-                <ListItem key={value} button>
+                <ListItem key={value}>
                     <div>
                         <Dialog
                             fullScreen
                             open={this.state.open}
                             onClose={this.handleClickClose}
+                            TransitionComponent={Transition}
                         >
+                        <AppBar >
+                                <Toolbar>
+                                    <IconButton edge="start" color="inherit" onClick={this.handleClickClose} aria-label="close">
+                                        <CloseIcon />
+                                    </IconButton>
+                                <Typography variant="h6">
+                                    Application for adoption {value}  
+                                </Typography>
+
+                            </Toolbar>
+                         </AppBar>
                             <DialogTitle id="alert-dialog-title">{"Use Google's location service?"}</DialogTitle>
                             <DialogContent>
-                                <DialogContentText id="alert-dialog-description">
-                                    Let Google help apps determine location. This means sending anonymous location data to Google, even when no
-                                    apps are running.
-                                </DialogContentText>
+                                <AdoptionRequest id={value}/>  {/* Una vez se utilice el back se usara el id de la solicitud para extraer los datos */}
                             </DialogContent>
                             <Button autoFocus onClick={this.handleClickClose} color="primary">
                                 Marcar como leido
