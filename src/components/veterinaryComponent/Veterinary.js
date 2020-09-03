@@ -16,7 +16,7 @@ export default class Veterinary extends React.Component {
                         <h5 className="card-title"> {"$ " + this.props.price} </h5>
                         <div className="card-text"> {this.props.description} </div>
                         <br/>
-                        <a href="#" className="btn btn-primary"> See more </a>
+                        <a href="#" className="btn btn btn-primary"> See more </a>
                     </div>
                 </div>
             <br/>

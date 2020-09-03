@@ -17,7 +17,7 @@ export class ProductS extends Component{
             <h5 className="card-title"> {"$ " + this.props.price} </h5>
             <div className="card-text"> {this.props.description} </div>
             <br/>
-            <a href="#" className="btn btn-primary"> Agregar </a>
+            <a href="#" className="btn btn btn-primary"> Agregar </a>
           </div>
         </div>
         <br/>
