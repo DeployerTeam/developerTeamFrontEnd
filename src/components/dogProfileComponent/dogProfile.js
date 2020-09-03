@@ -3,6 +3,7 @@ import React from 'react';
 import Header from '../headerComponent/header';
 import './dogProfile.css';
 import Dogs from '../dogsComponent/dogs';
+import Dashboard from '../formularioAdopcion/dashboard';
 
 export default class DogProfile extends React.Component {
 
@@ -28,7 +29,7 @@ export default class DogProfile extends React.Component {
                         </div>                     
                     </div>
                     <div className="botonStyle2">
-                        <a href="/adoptForm" id="color" className="btn btn">Adopt</a>
+                        <Dashboard/>
                     </div>
                     <div className="botonStyle2">
                         <a href="/donation" id="color" className="btn btn">Donate to foundation</a>

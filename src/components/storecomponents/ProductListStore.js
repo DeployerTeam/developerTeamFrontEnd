@@ -1,11 +1,14 @@
 import React from 'react';
 import {ProductS} from './ProductStore';
+import './ProductListStore.css';
+import Header from '../headerComponent/header';
+
 export default class ProductListStore extends React.Component{
+
   constructor(props){
     super(props);
-    
-
   }
+
   render(){
     const products = [{name: "Product1", price: 50000, description: "Comida"},
     {name: "Product2", price: 50001, description: "Comida"},
@@ -25,6 +28,10 @@ export default class ProductListStore extends React.Component{
 
     return(
       <div>
+        <div>
+          <Header/>
+        </div>
+        
         <div className="card-deck">
           {productList}
         </div>

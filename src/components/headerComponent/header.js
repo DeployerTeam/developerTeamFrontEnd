@@ -44,6 +44,7 @@ export default class Header extends Component {
                       <Button href="/signIn" color="black">Login</Button>
                       <Button href="/signUp" color="black">Register</Button>                      
                       <Button  color="black"  href="/profile">Profile</Button>
+                      <Button href="/" color="black">Start</Button>
                     </Toolbar>
                   </AppBar>
 

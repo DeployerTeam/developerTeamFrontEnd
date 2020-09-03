@@ -10,9 +10,6 @@ export class ProductS extends Component{
   render(){
     return (
       <div>
-        <div className="row header">
-            <Header />
-        </div>
         <div className="card" style={{width: "14rem"}}>
           <div className="card-header"> {this.props.name} </div>
           <img className="card-img-top rounded-0" src="https://mdbootstrap.com/img/Photos/Horizontal/Food/full page/2.jpg" alt="Card image cap"/>
