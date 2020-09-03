@@ -7,6 +7,10 @@ import Dashboard from '../formularioAdopcion/dashboard';
 
 export default class DogProfile extends React.Component {
 
+  constructor(props){
+    super(props);
+  }
+
     render() {
         return(
             <React.Fragment>
@@ -15,14 +19,14 @@ export default class DogProfile extends React.Component {
                         <Header />
                     </div>
                     <br/>
-                    <div className="row body">
+                    <div className="row body cont">
                         <div className="col-12 col-md-6">
                             <img className="img-thumbnail" id="imgPerfil" src="https://sumedico.blob.core.windows.net.optimalcdn.com/images/2020/05/13/cuidadosperrosschnauzer-focus-min0.03-0.46-983-557.jpg"></img>
                         </div>
                         <div className="col-12 col-md-6">
                             <h1><dt>Bolt's description</dt></h1>
                             <br/>
-                            <h4 className="font-weight-light">Sexo: Macho</h4>
+                            <h4 className="font-weight-light font">Sexo: Macho</h4>
                             <h4 className="font-weight-light">Raza: Schnauzer</h4>
                             <h4 className="font-weight-light">Edad: 2 años</h4>
                             <h4 className="font-weight-light">Ubicación: Bogotá</h4>
@@ -30,9 +34,8 @@ export default class DogProfile extends React.Component {
                     </div>
                     <div className="botonStyle2">
                         <Dashboard/>
-                    </div>
-                    <div className="botonStyle2">
-                        <a href="/donation" id="color" className="btn btn">Donate to foundation</a>
+
+                        <a href="/donation" id="color" className="btn btn float-left">Donate to foundation</a>
                     </div>
                 </div>
 

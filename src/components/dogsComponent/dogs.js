@@ -2,6 +2,7 @@ import React from 'react';
 
 import Header from '../headerComponent/header';
 import './dogs.css';
+import PetsList from './PetsList'
 
 export default class Dogs extends React.Component {
 
@@ -11,22 +12,22 @@ export default class Dogs extends React.Component {
         return (
             <React.Fragment>
                 <div style={{height: + window.screen.height}} className="container-fluid">
-
-                    <br></br>
-                    <br></br>
                     <div className="row">
                         <Header />
                     </div>
+                    <br/>
 
                     <div className="botonStyle" >
                         <a href="/main">
                             <button id="color" className={"btn btn-outline btn-light btn-block "}>Interested in giving in adoption</button>
                         </a>
                     </div>
-                    <br ></br>
-                    <br ></br>
-                    <br ></br>
-                    <div className="row body wrapper">
+                    <br/>
+                    <br/>
+                    <div className="veterinaries">
+                      <PetsList />
+                    </div>
+                    {/*<div className="row body wrapper">
                         <div className="card menuCard">
                             <img className="card-img-top" src="https://perritos882.files.wordpress.com/2016/12/cropped-imagenes-de-perritos-11.jpg" alt="Card image" height="185px"></img>
                             <div className="card-body">
@@ -58,7 +59,7 @@ export default class Dogs extends React.Component {
                                 <a href="/dogProfile" className="btn btn btn-primary">See Profile</a>
                             </div>
                         </div>
-                    </div>
+                    </div>*/}
                 </div>
             </React.Fragment>
 

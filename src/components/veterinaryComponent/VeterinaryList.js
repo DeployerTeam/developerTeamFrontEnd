@@ -7,7 +7,7 @@ export default class VeterinaryList extends React.Component {
     constructor(props){
         super(props);
       }
-      
+
       render(){
         const products = [{name: "Veterinary1", price: 50000, description: "Vet Market"},
         {name: "Veterinary2", price: 50001, description: "Vet Market"},
@@ -19,12 +19,12 @@ export default class VeterinaryList extends React.Component {
         {name: "Veterinary8", price: 50007, description: "Vet Market"},
         {name: "Veterinary9", price: 50008, description: "Vet Market"},
         {name: "Veterinary10", price: 50009, description: "Vet Market"}];
-        
+
         const veterinaryList = products.map((product, index) => {
           return <Veterinary key={index} name={product.name} price={product.price} description={product.description}/>
-          
+
         });
-    
+
         return(
           <div>
             <div className="card-deck">

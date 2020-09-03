@@ -1,5 +1,5 @@
 body{
-  background-image: url("https://cdn.pixabay.com/photo/2015/10/17/17/15/background-992858_1280.png") !important;
+  background-image: url("https://cdn.pixabay.com/photo/2015/10/17/17/14/background-992850_1280.png") !important;
   font-family: Didact Gothic !important;
 
 }
@@ -29,7 +29,7 @@ a:link, a:visited, a:active {
 
 .main{
 
-    background-image: url("https://cdn.pixabay.com/photo/2015/10/17/17/15/background-992858_1280.png") !important;
+    background-image: url("https://cdn.pixabay.com/photo/2015/10/17/17/14/background-992850_1280.png") !important;
     min-height: 100vh;
     min-width: 100vw;
     background-size: cover;

@@ -2,15 +2,18 @@
     background-color: whitesmoke;
 }
 
-.body{
-
+.cont{
+  width: 100%;
+  margin-left: 10%;
+  margin-top: 5%;
 }
 
 .botonStyle2 {
     float: left;
     margin: 3px;
-    margin-top: 15px;
     border-width: 1px;
+    margin-left: 12%;
+
 }
 
 #imgPerfil {
