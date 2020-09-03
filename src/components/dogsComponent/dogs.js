@@ -10,8 +10,8 @@ export default class Dogs extends React.Component {
     render() {
         return (
             <React.Fragment>
-                <div style={{height: + window.screen.height}} className="container">
-                    <br></br>
+                <div style={{height: + window.screen.height}} className="container-fluid">
+
                     <br></br>
                     <br></br>
                     <div className="row">
@@ -61,7 +61,7 @@ export default class Dogs extends React.Component {
                     </div>
                 </div>
             </React.Fragment>
-            
+
         );
     }
 

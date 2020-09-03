@@ -10,7 +10,7 @@ export default class DogProfile extends React.Component {
     render() {
         return(
             <React.Fragment>
-                <div style={{height: + window.screen.height}} className="container">
+                <div style={{height: + window.screen.height}} className="container-fluid">
                     <div className="row">
                         <Header />
                     </div>
@@ -26,7 +26,7 @@ export default class DogProfile extends React.Component {
                             <h4 className="font-weight-light">Raza: Schnauzer</h4>
                             <h4 className="font-weight-light">Edad: 2 años</h4>
                             <h4 className="font-weight-light">Ubicación: Bogotá</h4>
-                        </div>                     
+                        </div>
                     </div>
                     <div className="botonStyle2">
                         <Dashboard/>
@@ -35,7 +35,7 @@ export default class DogProfile extends React.Component {
                         <a href="/donation" id="color" className="btn btn">Donate to foundation</a>
                     </div>
                 </div>
-                
+
             </React.Fragment>
         );
     }

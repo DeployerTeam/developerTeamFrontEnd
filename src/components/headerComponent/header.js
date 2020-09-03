@@ -14,25 +14,29 @@ export default class Header extends Component {
 
     constructor(props){
       super(props);
+      this.state = {
+        modal: false
+      }
+      this.abrirModal = this.abrirModal.bind(this);
 
-      this.abrirPerfil = this.abrirPerfil.bind(this);
     }
 
-    abrirPerfil(){
-      return(
-        <div>
-
-        <h1>hdsad</h1>
-        <Model />
-        </div>
-      )
+    abrirModal(){
+      if(!this.state.modal){
+        this.setState({
+          modal: true
+        })
+      }
     }
+
 
     render() {
+
         return (
             <React.Fragment>
                 <div className="container">
                   <div className="root">
+
                   <AppBar position="fixed">
                     <Toolbar>
                       <IconButton edge="start" href="/profile" className="menuButton" color="black" aria-label="menu">
@@ -42,8 +46,8 @@ export default class Header extends Component {
                           Appet
                       </Typography>
                       <Button href="/signIn" color="black">Login</Button>
-                      <Button href="/signUp" color="black">Register</Button>                      
-                      <Button  color="black"  href="/profile">Profile</Button>
+                      <Button href="/signUp" color="black">Register</Button>
+                      <Button href="/profile">Profile</Button>
                       <Button href="/" color="black">Start</Button>
                     </Toolbar>
                   </AppBar>

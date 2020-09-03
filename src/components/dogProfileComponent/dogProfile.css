@@ -2,6 +2,10 @@
     background-color: whitesmoke;
 }
 
+.body{
+
+}
+
 .botonStyle2 {
     float: left;
     margin: 3px;
@@ -12,5 +16,5 @@
 #imgPerfil {
     width: 100%;
     border-color: steelblue;
-    
+
 }

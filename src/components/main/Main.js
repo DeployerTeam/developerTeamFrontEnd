@@ -15,7 +15,7 @@ export default class Main extends React.Component{
                     <div className="row">
                         <Header/>
                     </div>
-                    
+
                     <div className="row body">
                         <a className="col-12 col-md-4 sect" href="/adoption"><div >
                             <h1>ADOPTION</h1>
@@ -30,7 +30,7 @@ export default class Main extends React.Component{
 
                 </div>
             </React.Fragment>
-            
+
         );
     }
 
