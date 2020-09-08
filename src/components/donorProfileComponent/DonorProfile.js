@@ -8,7 +8,6 @@ import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import Dialog from '@material-ui/core/Dialog';
 import DialogContent from '@material-ui/core/DialogContent';
-import DialogTitle from '@material-ui/core/DialogTitle';
 import Slide from '@material-ui/core/Slide';
 
 import AppBar from '@material-ui/core/AppBar';
@@ -33,7 +32,7 @@ export default class DonorProfile extends Component{
         this.setOpen = this.setOpen.bind(this);
         this.handleClickOpen = this.handleClickOpen.bind(this);
         this.handleClickClose = this.handleClickClose.bind(this);
-    
+
     }
 
     setOpen(action){
@@ -67,14 +66,14 @@ export default class DonorProfile extends Component{
                             onClose={this.handleClickClose}
                             TransitionComponent={Transition}
                         >
-                        
+
                         <AppBar >
                                 <Toolbar>
                                     <IconButton edge="start" color="inherit" onClick={this.handleClickClose} aria-label="close">
                                         <CloseIcon />
                                     </IconButton>
                                 <Typography variant="h6">
-                                    Application for adoption {value}  
+                                    Application for adoption {value}
                                 </Typography>
 
                             </Toolbar>

@@ -26,7 +26,7 @@ export default class Profile extends React.Component {
         <br/>
         <br/>
         <br/>
-        <Model/>
+      
 
       </div>
     )

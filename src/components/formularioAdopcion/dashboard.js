@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import ReactDOM from "react-dom";
 import './modal.css';
 import Modal from 'react-bootstrap/Modal'
 import Button from 'react-bootstrap/Button'
@@ -33,7 +32,7 @@ export default class Dashboard extends Component {
 
 const ModalFormulary = ({ handleClose, show, children }) => {
     const showHideClassName = show ? "modal display-block" : "modal display-none";
-  
+
     return (
       <div className={showHideClassName}>
         <Modal size="lg" show={show} onHide={handleClose}>

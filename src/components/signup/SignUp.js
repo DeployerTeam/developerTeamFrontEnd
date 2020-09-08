@@ -105,11 +105,11 @@ class SignUp extends React.Component {
           <div className="wrap-signup">
             <form className="signup-form">
               <span className="signup-form-title">
-                PetStore
+                Appet
               </span>
 
-              <FormControl component="fieldset">
-                  <FormLabel component="legend">Type</FormLabel>
+              <FormControl className="radio-user" component="fieldset">
+                  <FormLabel component="legend" style={{color: "#fff", "font-size":"20px"}}>Type</FormLabel>
                   <RadioGroup aria-label="gender" name="gender1" value={this.state.type} onChange={this.handleChangeType}>
                   <FormControlLabel value="user" control={<Radio />} label="User" />
                   <FormControlLabel value="company" control={<Radio />} label="Company" />
@@ -117,13 +117,13 @@ class SignUp extends React.Component {
               </FormControl>
 
               <div className="wrap-input">
-                <input className="input" type="text" name="email" onChange={this.onChangeEmail}/>
+                <input className="input" name="email" onChange={this.onChangeEmail}/>
                 <span className="focus-input"></span>
                 <span className="label-input">Mail</span>
               </div>
 
               <div className="wrap-input">
-                <input className="input" type="text" name="pass" onChange={this.onChangeUserName}/>
+                <input className="input" name="pass" onChange={this.onChangeUserName}/>
                 <span className="focus-input"></span>
                 <span className="label-input">Name</span>
               </div>
@@ -135,7 +135,7 @@ class SignUp extends React.Component {
               </div>
 
               <div className="wrap-input">
-                <input className="input" type="text" name="pass" onChange={this.onChangeConfirmPassword}/>
+                <input className="input" type="password" name="pass" onChange={this.onChangeConfirmPassword}/>
                 <span className="focus-input"></span>
                 <span className="label-input">Confirm Password</span>
               </div>
@@ -147,7 +147,7 @@ class SignUp extends React.Component {
               </div>
 
               <div className="wrap-input">
-                <input className="input" type="text" name="pass" onChange={this.onChangeNameCompany}/>
+                <input className="input" name="pass" onChange={this.onChangeNameCompany}/>
                 <span className="focus-input"></span>
                 <span className="label-input">Company or foundation</span>
               </div>

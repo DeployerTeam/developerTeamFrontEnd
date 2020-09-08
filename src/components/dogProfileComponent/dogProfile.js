@@ -18,12 +18,11 @@ export default class DogProfile extends React.Component {
                     <div className="row">
                         <Header />
                     </div>
-                    <br/>
                     <div className="row body cont">
                         <div className="col-12 col-md-6">
                             <img className="img-thumbnail" id="imgPerfil" src="https://sumedico.blob.core.windows.net.optimalcdn.com/images/2020/05/13/cuidadosperrosschnauzer-focus-min0.03-0.46-983-557.jpg"></img>
                         </div>
-                        <div className="col-12 col-md-6">
+                        <div className="col-12 col-md-6" style={{color: "#fff"}}>
                             <h1><dt>Bolt's description</dt></h1>
                             <br/>
                             <h4 className="font-weight-light font">Sexo: Macho</h4>
@@ -33,9 +32,8 @@ export default class DogProfile extends React.Component {
                         </div>
                     </div>
                     <div className="botonStyle2">
+                        <a href="/donation" id="color" className="btn btn float-left mr-2">Donate to foundation</a>
                         <Dashboard/>
-
-                        <a href="/donation" id="color" className="btn btn float-left">Donate to foundation</a>
                     </div>
                 </div>
 

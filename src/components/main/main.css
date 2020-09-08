@@ -7,7 +7,7 @@ body{
 a{
     list-style: none;
     text-decoration: none;
-    color: black;
+    color: white;
     font-family: Didact Gothic !important;
 
 }
@@ -54,12 +54,10 @@ a:link, a:visited, a:active {
     transition-duration: 2s;
     cursor: pointer;
     background-image: url("https://image.freepik.com/vector-gratis/perro-gato-mejores-amigos_102034-74.jpg");
-    border-radius:50%;
-    -webkit-border-radius:50%;
+    border-radius:40%;
+    -webkit-border-radius:20%;
     box-shadow: 0px 0px 15px 15px #ec731e;
     -webkit-box-shadow: 0px 0px 15px 15px #ec731e;
-    transform: rotate(360deg);
-    -webkit-transform: rotate(360deg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -77,7 +75,7 @@ a:link, a:visited, a:active {
 
 .body{
   width: 70%;
-  margin-left: 15%;
+  margin-left: 22%;
 
 
 
