@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import './modal.css';
-import Profile from './profile.js';
+import Profile from './Profile.js';
 import Modal from 'react-bootstrap/Modal'
 import Button from 'react-bootstrap/Button'
 import NavDropdown from 'react-bootstrap/NavDropdown';
