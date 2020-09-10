@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import './header.css';
-import Model from '../profile/Model'
 import PrimarySearchAppBar from './NavBar.js';
 
 export default class Header extends Component {

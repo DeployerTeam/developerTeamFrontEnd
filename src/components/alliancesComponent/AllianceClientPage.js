@@ -1,9 +1,9 @@
 import React from 'react';
-import './VeterinaryClientPage.css';
+import './AllianceClientPage.css';
 import Header from '../headerComponent/header';
-import VeterinaryList from './VeterinaryList'
+import AllianceList from './AllianceList'
 
-export default class VeterinaryClientPage extends React.Component{
+export default class AllianceClientPage extends React.Component{
   constructor(props) {
     super(props);
     this.state = {
@@ -38,7 +38,7 @@ export default class VeterinaryClientPage extends React.Component{
           <div className="searchBox" width="50%">
             <form onSubmit={this.handleSubmitSearch}>
               <div className="input-group mb-3">
-                <input type="text" onChange={this.handleChangeSearchBar} className="form-control" placeholder="Veterinaris" aria-label="Veterinaris" aria-describedby="button-addon2" />
+                <input type="text" onChange={this.handleChangeSearchBar} className="form-control" placeholder="Alliances" aria-label="Alliances" aria-describedby="button-addon2" />
                 <div className="input-group-append">
                   <button className="btn btn-dark" type="submit" id="search">Search</button>
                 </div>
@@ -46,8 +46,8 @@ export default class VeterinaryClientPage extends React.Component{
             </form>
           </div>
           <br/>
-          <div className="veterinaries">
-            <VeterinaryList/>
+          <div className="alliances">
+            <AllianceList/>
           </div>
         </div>
 

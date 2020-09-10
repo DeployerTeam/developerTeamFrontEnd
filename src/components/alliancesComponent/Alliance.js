@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-export default class Veterinary extends React.Component {
+export default class Alliance extends React.Component {
     constructor(props){
         super(props);
       }

@@ -2,8 +2,8 @@ import React from 'react';
 
 import Header from '../headerComponent/header';
 import './dogProfile.css';
-import Dogs from '../dogsComponent/dogs';
 import Dashboard from '../formularioAdopcion/dashboard';
+import Breadcrumb from 'react-bootstrap/Breadcrumb';
 
 export default class DogProfile extends React.Component {
 
@@ -14,9 +14,17 @@ export default class DogProfile extends React.Component {
     render() {
         return(
             <React.Fragment>
-                <div style={{height: + window.screen.height}} className="container-fluid">
+                <div className="general">
                     <div className="row">
                         <Header />
+                    </div>
+                    <div className="back">
+                        <Breadcrumb >
+                            <Breadcrumb.Item href="/adoption" className= "bc">
+                                pets
+                            </Breadcrumb.Item>
+                            <Breadcrumb.Item active>pet</Breadcrumb.Item>
+                        </Breadcrumb>
                     </div>
                     <div className="row body cont">
                         <div className="col-12 col-md-6">

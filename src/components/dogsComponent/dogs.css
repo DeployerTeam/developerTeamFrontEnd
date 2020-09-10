@@ -1,9 +1,5 @@
 
 
-.menuCard{
-
-}
-
 @media screen and (max-width: 700px) {
   .menuCard  {
     width: 100%;
@@ -11,8 +7,13 @@
   }
 }
 
-#color {
-    background-color: lightblue;
+.general {
+  overflow-x:auto;
+  top:40px;
+  left:0;
+  right:0;
+  bottom:0;
+  position:absolute;
 }
 
 .botonStyle {
@@ -28,5 +29,10 @@
     grid-gap: 10px;
     grid-auto-rows: minmax(100px, auto);
     background-color: #848484
+}
 
+.pets {
+  margin-left: 5%;
+  margin-right: 2%;
+  margin-top: 7%;
 }

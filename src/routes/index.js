@@ -7,7 +7,7 @@ import Login from '../components/login/Login';
 import Dogs from '../components/dogsComponent/dogs';
 import DogProfile from '../components/dogProfileComponent/dogProfile';
 import SignUp from '../components/signup/SignUp';
-import VeterinaryClientPage from '../components/veterinaryComponent/VeterinaryClientPage';
+import AllianceClientPage from '../components/alliancesComponent/AllianceClientPage';
 import DonorProfile from '../components/donorProfileComponent/DonorProfile';
 import Profile from '../components/profile/Profile';
 
@@ -21,7 +21,7 @@ export default () => (
             <Route path="/signUp" exact component={SignUp} />
             <Route path="/adoption" exact component={Dogs} />
             <Route path="/dogProfile" exact component={DogProfile}/>
-            <Route path="/veterinary" exact component={VeterinaryClientPage}/>
+            <Route path="/alliances" exact component={AllianceClientPage}/>
             <Route path="/profile" exact component={Profile}/>
             <Route path="/donorprofile" exact component={DonorProfile}/>
         </Switch>
