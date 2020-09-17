@@ -47,7 +47,7 @@ export default class Pagos extends React.Component{
                                             disableElevation
                                             justify="center"
                                             >
-                                                Donates
+                                                Donate
                                             </Button>
                                         </div>
                                         
