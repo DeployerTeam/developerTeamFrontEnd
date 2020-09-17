@@ -13,8 +13,7 @@ import Pagos from './components/pagos/pagos';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Pagos/>
-    {/* <Router/> */}
+    <Router/> 
   </React.StrictMode>,
   document.getElementById('root')
 );

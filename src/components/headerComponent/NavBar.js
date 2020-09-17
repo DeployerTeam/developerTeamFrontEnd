@@ -1,8 +1,8 @@
 import React from 'react';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
-import NavDropdown from 'react-bootstrap/NavDropdown';
 import Dashboard from '../profile/dashboard';
+
 
 
 
@@ -10,15 +10,15 @@ export default function PrimarySearchAppBar() {
   return(
     <div className="container-fluid prueba">
       <Navbar collapseOnSelect expand="lg" bg="primary" variant="dark"className="fixed-top">
-        <Navbar.Brand href="#home">Appet</Navbar.Brand>
+        <Navbar.Brand href="/">Appet</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="mr-auto">
+            <Dashboard/>
+            <Nav.Link href="/donorprofile">
+              Inbox
+            </Nav.Link>
 
-            <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
-              <Dashboard/>
-              <NavDropdown.Divider />
-            </NavDropdown>
           </Nav>
           <Nav>
             <Nav.Link href="/">

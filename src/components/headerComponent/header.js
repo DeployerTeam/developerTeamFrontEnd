@@ -26,7 +26,6 @@ export default class Header extends Component {
 
         return (
             <React.Fragment>
-
                 <PrimarySearchAppBar />
                 <div className="container-fluid">
                   <div className="root">
