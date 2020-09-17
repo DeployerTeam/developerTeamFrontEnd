@@ -2,7 +2,7 @@ import React from 'react';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import Dashboard from '../profile/dashboard';
-
+import AllyDashboard from '../profile/AllyDashboard';
 
 
 
@@ -15,6 +15,7 @@ export default function PrimarySearchAppBar() {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="mr-auto">
             <Dashboard/>
+            <AllyDashboard/>
             <Nav.Link href="/donorprofile">
               Inbox
             </Nav.Link>
