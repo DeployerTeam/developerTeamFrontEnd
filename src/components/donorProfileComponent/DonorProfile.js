@@ -17,7 +17,7 @@ import Typography from '@material-ui/core/Typography';
 import CloseIcon from '@material-ui/icons/Close';
 
 import { AdoptionRequest } from './AdoptionRequest';
-
+import './DonorProfile.css';
 
 const Transition = React.forwardRef(function Transition(props, ref) {
     return <Slide direction="up" ref={ref} {...props} />;
@@ -58,17 +58,18 @@ export default class DonorProfile extends Component{
             {[0, 1, 2, 3].map((value) => {
               const labelId = `checkbox-list-secondary-label-${value}`;
               return (
-                <ListItem key={value}>
+                <ListItem key={value} className="container">
                     <div>
                         <Dialog
                             fullScreen
                             open={this.state.open}
                             onClose={this.handleClickClose}
                             TransitionComponent={Transition}
+                            className="dialog"
                         >
 
                         <AppBar >
-                                <Toolbar>
+                                <Toolbar className="toolbar">
                                     <IconButton edge="start" color="inherit" onClick={this.handleClickClose} aria-label="close">
                                         <CloseIcon />
                                     </IconButton>
@@ -98,7 +99,7 @@ export default class DonorProfile extends Component{
                     />
                   </ListItemAvatar>
                   <ListItemText id={labelId} primary={`Application for adoption  ${value + 1}`} />
-                  <Button autoFocus onClick={this.handleClickOpen} color="primary">
+                  <Button autoFocus onClick={this.handleClickOpen} color="white" className="botonEvaluar">
                         Evaluar
                   </Button>
                 </ListItem>

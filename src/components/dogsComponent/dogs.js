@@ -11,7 +11,7 @@ export default class Dogs extends React.Component {
     render() {
         return (
             <React.Fragment>
-                
+
                 <div className="general">
                     <div className="row">
                         <Header />
