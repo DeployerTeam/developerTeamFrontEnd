@@ -1,0 +1,26 @@
+.mainImage {
+    position: absolute;
+    top: 10%;
+    text-align: center;
+}
+
+.searchBox {
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 20%;
+}
+
+.general {
+    overflow-x:auto;
+    top:40px;
+    left:0;
+    right:0;
+    bottom:0;
+    position:absolute;
+ }
+
+ .alliances {
+    margin-left: 5%;
+    margin-right: 2%;
+    margin-top: 7%;
+ }

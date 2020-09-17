@@ -2,15 +2,58 @@
     background-color: whitesmoke;
 }
 
+.general {
+  overflow-x:auto;
+  max-width: 100vw;
+  top:40px;
+  left:0;
+  right:0;
+  bottom:0;
+  position:absolute;
+}
+
+.back {
+  margin-left: 5%;
+  margin-top: 5%;
+  width: 10%;
+  max-height: 5%;
+  color: black;
+}
+
+.cont {
+  max-width: 100vw;
+  width: 85%;
+  margin-left: 10%;
+  margin-top: 5%;
+}
+
+.Breadcrumb >.active {
+  color: black !important;
+}
+
+.bc {
+  font: black !important;
+}
+
+.bc :hover {
+  color: black !important;
+  
+}
+
 .botonStyle2 {
-    float: left;
-    margin: 3px;
-    margin-top: 15px;
+
     border-width: 1px;
+    margin-top: 2%;
+    margin-left: 15%;
+
 }
 
 #imgPerfil {
     width: 100%;
     border-color: steelblue;
-    
+
+}
+
+.prueba{
+  font-size: 20px;
 }

@@ -1,8 +1,10 @@
 import React, { Component } from "react";
 import './modal.css';
+import Profile from './Profile.js';
 import Modal from 'react-bootstrap/Modal'
 import Button from 'react-bootstrap/Button'
-import Formulary from './formulary.js'
+import NavDropdown from 'react-bootstrap/NavDropdown';
+
 
 export default class Dashboard extends Component {
   state = { show: false };
@@ -22,9 +24,7 @@ export default class Dashboard extends Component {
           <p>Modal</p>
           <p>Data</p>
         </ModalFormulary>
-        <Button variant="primary" onClick={this.showModal}>
-          Adopt
-        </Button>
+        <NavDropdown.Item onClick={this.showModal}>Profile</NavDropdown.Item>
       </main>
     );
   }
@@ -40,14 +40,14 @@ const ModalFormulary = ({ handleClose, show, children }) => {
                 <Modal.Title>Adoption Form</Modal.Title>
             </Modal.Header>
             <Modal.Body>
-                <Formulary/>
+                <Profile/>
             </Modal.Body>
             <Modal.Footer>
                 <Button variant="secondary" onClick={handleClose}>
                     Close
                 </Button>
                 <Button variant="primary" onClick={handleClose}>
-                    Submit
+                    Save Changes
                 </Button>
             </Modal.Footer>
         </Modal>
