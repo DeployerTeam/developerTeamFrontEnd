@@ -4,7 +4,7 @@ import Form from 'react-bootstrap/Form'
 
 
 
-export default class Profile extends Component {
+export default class AllyProfileModal extends Component {
 
   render(){
       return(
@@ -28,39 +28,18 @@ export default class Profile extends Component {
             <form >
               <div className="row">
                 <div className="col-25">
-                  <label for="fname">Name</label>
+                  <label for="fname">Company Name</label>
                 </div>
                 <div className="col-75">
-                  <input type="text" id="fname" name="firstname" placeholder="Complete Name.."/>
+                  <input type="text" id="cname" name="companyname" placeholder="Complete Name..."/>
                 </div>
-              </div>
-              <div className="row">
-                <div className="col-25">
-                  <label for="age">Age</label>
-                </div>
-                <div className="col-75">
-                  <input type="text" id="age" name="age" placeholder="Age.."/>
-                </div>
-              </div>
-              <div className="row">
-                <div className="col-25">
-                  <label for="gender">Gender</label>
-                </div>
-                <div className="col-75">
-                  <select id="gender" name="gender">
-                    <option value="" selected disabled hidden>Choose here</option>
-                    <option value="australia">Male</option>
-                    <option value="canada">Female</option>
-                    <option value="usa">Other</option>
-                  </select>
-                </div>
-              </div>                        
+              </div>                 
               <div className="row">
                 <div className="col-25">
                   <label for="pNumber">Phone Number</label>
                 </div>
                 <div className="col-75">
-                  <input type="text" id="pNumber" name="pNumber" placeholder="Phone Number.."/>
+                  <input type="text" id="pNumber" name="pNumber" placeholder="Phone Number..."/>
                 </div>
               </div>                        
               <div className="row">
@@ -68,7 +47,7 @@ export default class Profile extends Component {
                   <label for="email">E-mail</label>
                 </div>
                 <div className="col-75">
-                  <input type="text" id="email" name="email" placeholder="E-mail Address.."/>
+                  <input type="text" id="email" name="email" placeholder="E-mail Address..."/>
                 </div>
               </div>                        
               <div className="row">
@@ -76,7 +55,7 @@ export default class Profile extends Component {
                   <label for="city">City</label>
                 </div>
                 <div className="col-75">
-                  <input type="text" id="city" name="city" placeholder="City.."/>
+                  <input type="text" id="city" name="city" placeholder="City..."/>
                 </div>
               </div>
               <div className="row">
@@ -84,7 +63,7 @@ export default class Profile extends Component {
                   <label for="address">Address</label>
                 </div>
                 <div className="col-75">
-                  <input type="text" id="address" name="address" placeholder="Address.."/>
+                  <input type="text" id="address" name="address" placeholder="Address..."/>
                 </div>
               </div>                    
             </form>

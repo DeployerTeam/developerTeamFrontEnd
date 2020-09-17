@@ -2,7 +2,8 @@ import React from 'react';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import Dashboard from '../profile/dashboard';
+import UserDashboard from '../profile/UserDashboard';
+import AllyDashboard from '../profile/AllyDashboard';
 
 
 
@@ -16,7 +17,8 @@ export default function PrimarySearchAppBar() {
           <Nav className="mr-auto">
 
             <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
-              <Dashboard/>
+              <UserDashboard/>
+              <AllyDashboard/>
               <NavDropdown.Divider />
             </NavDropdown>
           </Nav>

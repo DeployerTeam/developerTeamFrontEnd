@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import './modal.css';
-import Profile from './Profile.js';
+import UserProfileModal from './UserProfileModal.js';
 import Modal from 'react-bootstrap/Modal'
 import Button from 'react-bootstrap/Button'
 import NavDropdown from 'react-bootstrap/NavDropdown';
 
 
-export default class Dashboard extends Component {
+export default class UserDashboard extends Component {
   state = { show: false };
 
   showModal = () => {
@@ -24,7 +24,7 @@ export default class Dashboard extends Component {
           <p>Modal</p>
           <p>Data</p>
         </ModalFormulary>
-        <NavDropdown.Item onClick={this.showModal}>Profile</NavDropdown.Item>
+        <NavDropdown.Item onClick={this.showModal}>User Profile</NavDropdown.Item>
       </main>
     );
   }
@@ -40,7 +40,7 @@ const ModalFormulary = ({ handleClose, show, children }) => {
                 <Modal.Title>Adoption Form</Modal.Title>
             </Modal.Header>
             <Modal.Body>
-                <Profile/>
+                <UserProfileModal/>
             </Modal.Body>
             <Modal.Footer>
                 <Button variant="secondary" onClick={handleClose}>
