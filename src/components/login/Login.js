@@ -49,12 +49,12 @@ class Login extends React.Component {
   			<div className="wrap-login">
   				<form className="login-form">
   					<span className="login-form-title">
-  						PetStore
+  						Appet
   					</span>
 
 
   					<div className="wrap-input">
-  						<input className="input" type="text" onChange={this.onChangeUsername} name="username"/>
+  						<input className="input" onChange={this.onChangeUsername} name="username"/>
   						<span className="focus-input"></span>
   						<span className="label-input">Username</span>
   					</div>

@@ -67,6 +67,7 @@ button {
   display: block;
   background-color: #f7f7f7;
   padding: 20px 55px 55px 55px;
+	background-image: url("https://cdn.pixabay.com/photo/2015/10/17/17/14/background-992850_1280.png") !important;
 }
 
 .signup-form-title {
@@ -74,7 +75,7 @@ button {
   display: block;
   font-family: Didact Gothic;
   font-size: 50px;
-  color: #333333;
+  color: #fff;
   text-align: center;
 	margin-bottom: 15%;
 }
@@ -83,12 +84,11 @@ button {
 
 .wrap-input {
   display: flex;
-
   align-items: flex-end;
   width: 100%;
   height: 75px;
   position: relative;
-  border: 2px solid #e6e6e6;
+  border: 2px solid #fff;
   border-radius: 30px;
   margin-bottom: 15px;
 }
@@ -96,7 +96,7 @@ button {
 .label-input {
   font-family: Didact Gothic;
   font-size: 18px;
-  color: #999999;
+  color: #fff;
   line-height: 1.2;
 
   display: block;
@@ -118,9 +118,13 @@ button {
   background: transparent;
   font-family: Didact Gothic;
   font-size: 18px;
-  color: #555555;
+  color: #fff;
   line-height: 1.2;
   padding: 0 26px;
+}
+
+.radio-user{
+	color: #fff;
 }
 
 input.input {
@@ -187,11 +191,11 @@ input.input {
 	float: right;
   height: 50px;
   border-radius: 20px;
-  background: #2A372B;
+  background: #309F24;
 
   font-family: Didact Gothic;
   font-size: 14px;
-  color: #fff;
+  color: #000;
   line-height: 1.2;
   text-transform: uppercase;
   letter-spacing: 1px;
