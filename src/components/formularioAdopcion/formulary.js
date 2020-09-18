@@ -2,6 +2,145 @@ import React, { Component } from "react";
 import './formulary.css';
 
 export default class Formulary extends Component {
+    constructor(props){
+        super(props);
+
+        this.state = {
+            name : '',
+            age : '',
+            gender : '',
+            phone : '',
+            email : '',
+            city : '',
+            address : '',
+            occupation : '',
+            typePlace: '',
+            ownerOrRent: '',
+            motive: '',
+            allowed: '',
+            allergic: '',
+            space: '',
+            pets: '',
+            financially: ''    
+        }
+        
+        this.onChangeName = this.onChangeName.bind(this);
+        this.onChangeAge = this.onChangeAge.bind(this);
+        this.onChangeGender = this.onChangeGender.bind(this);
+        this.onChangePhone = this.onChangePhone.bind(this);
+        this.onChangeEmail = this.onChangeEmail.bind(this);
+        this.onChangeCity = this.onChangeCity.bind(this);
+        this.onChangeAddress = this.onChangeAddress.bind(this);
+        this.onChangeOccupation = this.onChangeOccupation.bind(this);
+        this.onChangeTypePlace = this.onChangeTypePlace.bind(this);
+        this.onChangeOwnerOrRent = this.onChangeOwnerOrRent.bind(this);
+        this.onChangeMotive = this.onChangeMotive.bind(this);
+        this.onChangeAllowed = this.onChangeAllowed.bind(this);
+        this.onChangeAllergic = this.onChangeAllergic.bind(this);
+        this.onChangeSpace = this.onChangeSpace.bind(this);
+        this.onChangePets = this.onChangePets.bind(this);
+        this.onChangeFinancially = this.onChangeFinancially.bind(this);
+
+    }
+
+    onChangeName(event){
+        this.setState({
+          name: event.target.value
+        });
+    }
+
+    onChangeAge(event){
+        this.setState({
+          age: event.target.value
+        });
+    }
+
+    onChangeGender(event){
+        this.setState({
+          gender: event.target.value
+        });
+    }
+
+    onChangePhone(event){
+        this.setState({
+          phone: event.target.value
+        });
+    }
+
+    onChangeEmail(event){
+        this.setState({
+          email: event.target.value
+        });
+    }
+
+    onChangeCity(event){
+        this.setState({
+          city: event.target.value
+        });
+    }
+
+    onChangeAddress(event){
+        this.setState({
+          address: event.target.value
+        });
+    }
+
+    onChangeOccupation(event){
+        console.log(event.target.value);
+        this.setState({
+          occupation: event.target.value
+        });
+    }
+
+    onChangeTypePlace(event){
+        this.setState({
+          typePlace: event.target.value
+        });
+    }
+
+    onChangeOwnerOrRent(event){
+        this.setState({
+          ownerOrRent: event.target.value
+        });
+    }
+
+    onChangeMotive(event){
+        this.setState({
+          motive: event.target.value
+        });
+    }
+
+    onChangeAllowed(event){
+        this.setState({
+          allowed: event.target.value
+        });
+    }
+    
+    onChangeAllergic(event){
+        this.setState({
+          allergic: event.target.value
+        });
+    }
+
+    onChangeSpace(event){
+        this.setState({
+          space: event.target.value
+        });
+    }
+
+    onChangePets(event){
+        this.setState({
+          pets: event.target.value
+        });
+    }
+
+    onChangeFinancially(event){
+        this.setState({
+          financially: event.target.value
+        });
+    }
+
+
 
     render(){
         return(
@@ -12,7 +151,7 @@ export default class Formulary extends Component {
                                 <label for="fname">Name</label>
                             </div>
                             <div className="col-75">
-                                <input type="text" id="fname" name="firstname" placeholder="Complete Name.."/>
+                                <input onChange={this.onChangeName} type="text" id="fname" name="firstname" placeholder="Complete Name.."/>
                             </div>
                         </div>
                         <div className="row">
@@ -20,7 +159,7 @@ export default class Formulary extends Component {
                                 <label for="age">Age</label>
                             </div>
                             <div className="col-75">
-                                <input type="text" id="age" name="age" placeholder="Age.."/>
+                                <input onChange={this.onChangeAge} type="text" id="age" name="age" placeholder="Age.."/>
                             </div>
                         </div>
                         <div className="row">
@@ -28,7 +167,7 @@ export default class Formulary extends Component {
                                 <label for="gender">Gender</label>
                             </div>
                             <div className="col-75">
-                                <select id="gender" name="gender">
+                                <select value={this.state.gender} onChange={this.onChangeGender} id="gender" name="gender">
                                     <option value="" selected disabled hidden>Choose here</option>
                                     <option value="australia">Male</option>
                                     <option value="canada">Female</option>
@@ -41,7 +180,7 @@ export default class Formulary extends Component {
                                 <label for="pNumber">Phone Number</label>
                             </div>
                             <div className="col-75">
-                                <input type="text" id="pNumber" name="pNumber" placeholder="Phone Number.."/>
+                                <input onChange={this.onChangePhone} type="text" id="pNumber" name="pNumber" placeholder="Phone Number.."/>
                             </div>
                         </div>                        
                         <div className="row">
@@ -49,7 +188,7 @@ export default class Formulary extends Component {
                                 <label for="email">E-mail</label>
                             </div>
                             <div className="col-75">
-                                <input type="text" id="email" name="email" placeholder="E-mail Address.."/>
+                                <input onChange={this.onChangeEmail} type="text" id="email" name="email" placeholder="E-mail Address.."/>
                             </div>
                         </div>                        
                         <div className="row">
@@ -57,7 +196,7 @@ export default class Formulary extends Component {
                                 <label for="city">City</label>
                             </div>
                             <div className="col-75">
-                                <input type="text" id="city" name="city" placeholder="City.."/>
+                                <input onChange={this.onChangeCity} type="text" id="city" name="city" placeholder="City.."/>
                             </div>
                         </div>
                         <div className="row">
@@ -65,7 +204,7 @@ export default class Formulary extends Component {
                                 <label for="address">Address</label>
                             </div>
                             <div className="col-75">
-                                <input type="text" id="address" name="address" placeholder="Address.."/>
+                                <input onChange={this.onChangeAddress} type="text" id="address" name="address" placeholder="Address.."/>
                             </div>
                         </div>
                         <div className="row">
@@ -73,7 +212,7 @@ export default class Formulary extends Component {
                                 <label for="occupation">Occupation</label>
                             </div>
                             <div className="col-75">
-                                <select id="occupation" name="occupation">
+                                <select value={this.state.occupation} onChange={this.onChangeOccupation} id="occupation" name="occupation">
                                     <option value="" selected disabled hidden>Choose here</option>
                                     <option value="student">Studing</option>
                                     <option value="employ">Employed</option>
@@ -86,7 +225,7 @@ export default class Formulary extends Component {
                                 <label for="lPlace">Type of Living Place</label>
                             </div>
                             <div className="col-75">
-                                <select id="lPlace" name="lPlace">
+                                <select value={this.state.typePlace} onChange={this.onChangeTypePlace} id="lPlace" name="lPlace">
                                     <option value="" selected disabled hidden>Choose here</option>
                                     <option value="house">House</option>
                                     <option value="apartment">Apartment</option>
@@ -98,7 +237,7 @@ export default class Formulary extends Component {
                                 <label for="ownerRent">Owner or Rent</label>
                             </div>
                             <div className="col-75">
-                                <select id="ownerRent" name="ownerRent">
+                                <select value={this.state.ownerOrRent} onChange={this.onChangeOwnerOrRent} id="ownerRent" name="ownerRent">
                                     <option value="" selected disabled hidden>Choose here</option>
                                     <option value="owner">Owner</option>
                                     <option value="rent">Rent</option>
@@ -118,7 +257,7 @@ export default class Formulary extends Component {
                                 <label for="allowPet">Are pets allowed in your living place?</label>
                             </div>
                             <div className="col-75">
-                                <select id="allowPet" name="allowPet">
+                                <select value={this.state.allowed} onChange={this.onChangeAllowed} id="allowPet" name="allowPet">
                                     <option value="" selected disabled hidden>Choose here</option>
                                     <option value="yes">Yes</option>
                                     <option value="no">No</option>
@@ -130,7 +269,7 @@ export default class Formulary extends Component {
                                 <label for="allergic">Is someone in your living place allergic to pet's fur?</label>
                             </div>
                             <div className="col-75">
-                                <select id="allergic" name="allergic">
+                                <select value={this.state.allergic} onChange={this.onChangeAllergic} id="allergic" name="allergic">
                                     <option value="" selected disabled hidden>Choose here</option>
                                     <option value="yes">Yes</option>
                                     <option value="no">No</option>
@@ -142,7 +281,7 @@ export default class Formulary extends Component {
                                 <label for="space">You have enough space in your living place for a pet?</label>
                             </div>
                             <div className="col-75">
-                                <select id="space" name="space">
+                                <select value={this.state.space} onChange={this.onChangeSpace} id="space" name="space">
                                     <option value="" selected disabled hidden>Choose here</option>
                                     <option value="yes">Yes</option>
                                     <option value="no">No</option>
