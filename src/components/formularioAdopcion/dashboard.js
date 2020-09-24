@@ -5,6 +5,8 @@ import Button from 'react-bootstrap/Button'
 import Formulary from './formulary.js'
 
 export default class Dashboard extends Component {
+
+
   state = { show: false };
 
   showModal = () => {
@@ -14,6 +16,9 @@ export default class Dashboard extends Component {
   hideModal = () => {
     this.setState({ show: false });
   };
+
+
+
 
   render() {
     return (
@@ -40,14 +45,11 @@ const ModalFormulary = ({ handleClose, show, children }) => {
                 <Modal.Title>Adoption Form</Modal.Title>
             </Modal.Header>
             <Modal.Body>
-                <Formulary/>
+                <Formulary />
             </Modal.Body>
             <Modal.Footer>
                 <Button variant="secondary" onClick={handleClose}>
                     Close
-                </Button>
-                <Button variant="primary" onClick={handleClose}>
-                    Submit
                 </Button>
             </Modal.Footer>
         </Modal>

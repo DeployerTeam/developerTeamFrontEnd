@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import './formulary.css';
-
+import Button from 'react-bootstrap/Button'
 export default class Formulary extends Component {
     constructor(props){
         super(props);
@@ -24,6 +24,7 @@ export default class Formulary extends Component {
             financially: ''    
         }
         
+        this.handleSubmit = this.handleSubmit.bind(this);
         this.onChangeName = this.onChangeName.bind(this);
         this.onChangeAge = this.onChangeAge.bind(this);
         this.onChangeGender = this.onChangeGender.bind(this);
@@ -42,6 +43,35 @@ export default class Formulary extends Component {
         this.onChangeFinancially = this.onChangeFinancially.bind(this);
 
     }
+
+    handleSubmit(event){
+        event.preventDefault();
+
+        let formulary = {
+            name : this.state.name,
+            age : this.state.age,
+            gender : this.state.gender,
+            phone : this.phone,
+            email : this.state.email,
+            city : this.state.city,
+            address : this.state.address,
+            occupation : this.state.occupation,
+            typePlace: this.state.typePlace,
+            ownerOrRent: this.state.ownerOrRent,
+            motive: this.state.motive,
+            allowed: this.state.allowed,
+            allergic: this.state.allergic,
+            space: this.state.space,
+            pets: this.state.pets,
+            financially: this.state.financially
+        }
+
+        
+
+
+    }
+    
+    
 
     onChangeName(event){
         this.setState({
@@ -293,7 +323,7 @@ export default class Formulary extends Component {
                                 <label for="subject">Have you got any pets? (Number, type, age) </label>
                             </div>
                             <div class="col-75">
-                                <textarea id="subject" name="subject" placeholder="Write your answer.."></textarea>
+                                <textarea id="subject" onChange={this.onChangePets} name="subject" placeholder="Write your answer.."></textarea>
                             </div>
                         </div>
                         <div class="row">
@@ -301,9 +331,14 @@ export default class Formulary extends Component {
                                 <label for="subject">Are you financially stable? if not who is going to pay for the needs of your pet? </label>
                             </div>
                             <div class="col-75">
-                                <textarea id="subject" name="subject" placeholder="Write your answer.."></textarea>
+                                <textarea id="subject" onChange={this.onChangeFinancially} name="subject" placeholder="Write your answer.."></textarea>
                             </div>
                         </div>
+
+                            <Button variant="primary">
+                                Submit
+                            </Button>
+                        
                     </form>
                 </div>
         );
