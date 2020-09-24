@@ -20,8 +20,7 @@ class SignUp extends React.Component {
       phone: '',
       nameCompany:'',
       userName: '',
-      type: ''
-
+      
     }
 
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -37,18 +36,14 @@ class SignUp extends React.Component {
 
   handleSubmit(event){
     event.preventDefault();
-    var user = [
-      this.state.email,
-      this.state.userName,
-      this.state.password,
-      this.state.phone,
-      this.state.company      
-    ]
+
     if(this.state.type == "user"){
+      let user = { email:this.state.email, name:this.state.name, password:this.state.password, phone:this.state.phone}
       axios.post(API_BASE_URL_BACK + "/user/create", user)
       .then(res => { console.log("Creando Usuario")})
     } else if (this.state.type == "company") {
-      axios.post(API_BASE_URL_BACK + "/proveedores/create", user)
+      let provider = { email:this.state.email, password:this.state.password, phone:this.state.phone, nameCompany:this.state.nameCompany}
+      axios.post(API_BASE_URL_BACK + "/proveedores/create", provider)
       .then(res => { console.log("Creando Proveedor")})
     }
 
@@ -87,7 +82,7 @@ class SignUp extends React.Component {
 
   onChangeUserName(event){
     this.setState({
-      userName: event.target.value
+      name: event.target.value
     });
   }
 

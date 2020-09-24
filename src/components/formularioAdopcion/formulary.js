@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import './formulary.css';
 import Button from 'react-bootstrap/Button'
+import axios from 'axios';
+import {API_BASE_URL_BACK} from '../../constants/index';
 export default class Formulary extends Component {
     constructor(props){
         super(props);
@@ -47,11 +49,11 @@ export default class Formulary extends Component {
     handleSubmit(event){
         event.preventDefault();
 
-        let formulary = {
+        const adoptForm = {
             name : this.state.name,
             age : this.state.age,
             gender : this.state.gender,
-            phone : this.phone,
+            phone : this.state.phone,
             email : this.state.email,
             city : this.state.city,
             address : this.state.address,
@@ -65,6 +67,9 @@ export default class Formulary extends Component {
             pets: this.state.pets,
             financially: this.state.financially
         }
+
+        axios.post(API_BASE_URL_BACK + "/user/addform", adoptForm)
+        .then(res => { console.log("Agregando Solicitud de adopción")})
 
     }
     
@@ -92,6 +97,7 @@ export default class Formulary extends Component {
         this.setState({
           phone: event.target.value
         });
+        console.log(this.state.phone);
     }
 
     onChangeEmail(event){
@@ -196,9 +202,9 @@ export default class Formulary extends Component {
                             <div className="col-75">
                                 <select value={this.state.gender} onChange={this.onChangeGender} id="gender" name="gender">
                                     <option value="" selected disabled hidden>Choose here</option>
-                                    <option value="australia">Male</option>
-                                    <option value="canada">Female</option>
-                                    <option value="usa">Other</option>
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
+                                    <option value="other">Other</option>
                                 </select>
                             </div>
                         </div>                        
@@ -332,7 +338,7 @@ export default class Formulary extends Component {
                             </div>
                         </div>
 
-                            <Button variant="primary">
+                            <Button onClick={this.handleSubmit} variant="primary">
                                 Submit
                             </Button>
                         

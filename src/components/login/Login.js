@@ -35,7 +35,13 @@ class Login extends React.Component {
       this.state.username,
       this.state.password
     ]
-    axios.post(API_BASE_URL_BACK + "/auth/signin", sesion).then(response => console.log(response.data));
+
+    axios.post(API_BASE_URL_BACK + "/auth/signin", sesion).then(response => {
+      console.log(response.data)
+      localStorage.setItem("localEmail", response.data.email);
+      localStorage.setItem("token", response.data.accessToken);
+      localStorage.setItem("tokenType", response.data.tokenType);
+    });
   }
 
   onChangeUsername(event){
