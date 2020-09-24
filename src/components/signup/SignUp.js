@@ -42,13 +42,13 @@ class SignUp extends React.Component {
       this.state.userName,
       this.state.password,
       this.state.phone,
-      this.state.company
+      this.state.company      
     ]
     if(this.state.type == "user"){
       axios.post(API_BASE_URL_BACK + "/user/create", user)
       .then(res => { console.log("Creando Usuario")})
     } else if (this.state.type == "company") {
-      axios.post(API_BASE_URL_BACK + "/proveedores", user)
+      axios.post(API_BASE_URL_BACK + "/proveedores/create", user)
       .then(res => { console.log("Creando Proveedor")})
     }
 
