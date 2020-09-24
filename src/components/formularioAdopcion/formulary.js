@@ -66,9 +66,6 @@ export default class Formulary extends Component {
             financially: this.state.financially
         }
 
-        
-
-
     }
     
     
