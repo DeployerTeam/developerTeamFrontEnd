@@ -3,6 +3,7 @@ import React from 'react';
 import Header from '../headerComponent/header';
 import Map from './AllianceMap';
 import './AllianceClientPage.css';
+import Button from 'react-bootstrap/Button'
 
 export default class AllianceClientPage extends React.Component {
 
@@ -16,6 +17,9 @@ export default class AllianceClientPage extends React.Component {
                 <div className="general">
                     <div className="row">
                       <Header />
+                    </div>
+                    <div className="back">
+                      <a href="/alliances" className="btn btn-primary">Back</a>
                     </div>
                     <div className="allianceName">
                       <h1><dt>VetStore</dt></h1>

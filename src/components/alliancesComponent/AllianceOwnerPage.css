@@ -1,5 +1,58 @@
-.mainImage {
-    position: absolute;
-    top: 10%;
+#color {
+    background-color: whitesmoke;
+}
+
+.general {
+  overflow-x:auto;
+  max-width: 100vw;
+  top:40px;
+  left:0;
+  right:0;
+  bottom:0;
+  position:absolute;
+}
+
+.back{
+  margin-top: 3%;
+}
+
+.allianceName{
     text-align: center;
+    color: whitesmoke;
+}
+
+.cont {
+  max-width: 100vw;
+  width: 85%;
+  margin-left: 10%;
+  margin-top: 5%;
+}
+
+.map{
+    min-height: 300px;
+    width: auto;
+    height: auto;
+    padding-bottom: 10px;
+}
+
+.info{
+    padding: 5%;
+    text-align: center;
+}
+
+.botonStyle2 {
+
+    border-width: 1px;
+    margin-top: 2%;
+    margin-left: 15%;
+
+}
+
+#imgPerfil {
+    width: 100%;
+    border-color: steelblue;
+}
+
+.prueba{
+  font-size: 20px;
 }

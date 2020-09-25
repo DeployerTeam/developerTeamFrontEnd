@@ -12,8 +12,11 @@
   position:absolute;
 }
 
+.back{
+  margin-top: 3%;
+}
+
 .allianceName{
-    margin-top: 5%;
     text-align: center;
     color: whitesmoke;
 }
@@ -25,12 +28,11 @@
   margin-top: 5%;
 }
 
-.cont> map{
-    min-width: 100px;
-    width: 100%;
-    min-height: 70px;
-    height: 100%;    
-    border-color: steelblue;
+.map{
+  min-height: 300px;
+  width: auto;
+  height: auto;
+  padding-bottom: 10px;
 }
 
 .info{
@@ -54,3 +56,5 @@
 .prueba{
   font-size: 20px;
 }
+
+

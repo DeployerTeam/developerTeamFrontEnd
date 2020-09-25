@@ -19,12 +19,7 @@ export default class DogProfile extends React.Component {
                         <Header />
                     </div>
                     <div className="back">
-                        <Breadcrumb >
-                            <Breadcrumb.Item href="/adoption" className= "bc">
-                                pets
-                            </Breadcrumb.Item>
-                            <Breadcrumb.Item active>pet</Breadcrumb.Item>
-                        </Breadcrumb>
+                      <a href="/adoption" className="btn btn-primary">Back</a>
                     </div>
                     <div className="row body cont">
                         <div className="col-12 col-md-6">

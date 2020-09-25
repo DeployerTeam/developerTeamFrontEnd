@@ -22,9 +22,6 @@ export default function PrimarySearchAppBar() {
 
           </Nav>
           <Nav>
-            <Nav.Link href="/">
-              Home
-            </Nav.Link>
             <Nav.Link href="/signin">
               Login
             </Nav.Link>

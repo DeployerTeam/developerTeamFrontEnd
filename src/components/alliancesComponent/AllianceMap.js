@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import GoogleMapReact from 'google-map-react';
+import './AllianceMap.css';
  
 const AnyReactComponent = ({ text }) => <div>{text}</div>;
  
@@ -14,13 +15,12 @@ export default class Map extends Component {
         lat: 4.753752,
         lng: -74.054166
         },
-        zoom: 11
+        zoom: 10
     };
  
   render() {
     return (
-      // Important! Always set the container height explicitly
-      <div style={{ height: '100%', width: '100%' }}>
+      <div className='mapContainer'>
         <GoogleMapReact
           bootstrapURLKeys={{ key: ''}}
           defaultCenter={this.props.center}
