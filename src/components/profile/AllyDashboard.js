@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import './modal.css';
 import Modal from 'react-bootstrap/Modal'
 import Button from 'react-bootstrap/Button'
-import NavDropdown from 'react-bootstrap/NavDropdown';
 import AllyProfile from "./AllyProfile";
 import Nav from 'react-bootstrap/Nav';
 

@@ -13,10 +13,8 @@
 }
 
 .back {
+  margin-top: 3%;
   margin-left: 5%;
-  margin-top: 5%;
-  width: 10%;
-  max-height: 5%;
   color: black;
 }
 

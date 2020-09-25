@@ -8,7 +8,7 @@ import Dogs from '../components/dogsComponent/dogs';
 import DogProfile from '../components/dogProfileComponent/dogProfile';
 import SignUp from '../components/signup/SignUp';
 import AllianceDashboard from '../components/alliancesComponent/AllianceDashboard';
-import AllianceClientPage from '../components/alliancesComponent/AllianceOwnerPage';
+import AllianceClientPage from '../components/alliancesComponent/AllianceClientPage';
 import DonorProfile from '../components/donorProfileComponent/DonorProfile';
 
 
