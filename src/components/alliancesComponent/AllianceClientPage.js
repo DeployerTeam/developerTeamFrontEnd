@@ -3,7 +3,7 @@ import React from 'react';
 import Header from '../headerComponent/header';
 import Map from './AllianceMap';
 import './AllianceClientPage.css';
-import Button from 'react-bootstrap/Button'
+import Carousel from 'react-bootstrap/Carousel'
 
 export default class AllianceClientPage extends React.Component {
 
@@ -29,8 +29,19 @@ export default class AllianceClientPage extends React.Component {
                         <div className="map col-12 col-md-6">
                           <Map/>
                         </div>
-                        <div className="col-12 col-md-6">
-                          <img className="img-thumbnail" id="imgPerfil" src="https://www.flsouthern.edu/getattachment/1af69455-422d-4da9-a15c-59d18764f746/pre-veterinary.aspx"></img>
+
+                        <div className="carousel col-12 col-md-6">
+                          <Carousel>
+                            <Carousel.Item>
+                            <img className="img-thumbnail" id="imgPerfil" src="https://www.flsouthern.edu/getattachment/1af69455-422d-4da9-a15c-59d18764f746/pre-veterinary.aspx"></img>
+                            </Carousel.Item>
+                            <Carousel.Item>
+                            <img className="img-thumbnail" id="imgPerfil" src="https://www.flsouthern.edu/getattachment/1af69455-422d-4da9-a15c-59d18764f746/pre-veterinary.aspx"></img>
+                            </Carousel.Item>
+                            <Carousel.Item>
+                            <img className="img-thumbnail" id="imgPerfil" src="https://www.flsouthern.edu/getattachment/1af69455-422d-4da9-a15c-59d18764f746/pre-veterinary.aspx"></img>
+                            </Carousel.Item>
+                          </Carousel>
                         </div>
                         
                     </div>
