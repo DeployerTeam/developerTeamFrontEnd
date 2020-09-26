@@ -100,7 +100,9 @@ class SignUp extends React.Component {
           <div className="wrap-signup">
             <form className="signup-form">
               <span className="signup-form-title">
-                Appet
+                <a href={"./"}>
+                  Appet  
+                </a>
               </span>
 
               <FormControl className="radio-user" component="fieldset">
