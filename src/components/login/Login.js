@@ -63,7 +63,9 @@ class Login extends React.Component {
   			<div className="wrap-login">
   				<form className="login-form" onSubmit={this.handleSubmit}>
   					<span className="login-form-title">
-  						Appet
+                <a href={"./"}>
+                  Appet  
+                </a>
   					</span>
 
 
