@@ -1,5 +1,5 @@
 .modal {
-    position: relative;
+    position: fixed !important;
     padding: 5%;
     left: 0;
     width:100%;

@@ -1,9 +1,8 @@
 import React from 'react';
-
 import Header from '../headerComponent/header';
-
 import './main.css';
 import Footer from '../footerComponent/Footer';
+import Dashboard from '../formularioPreferencias/dashboard';
 
 export default class Main extends React.Component{
 
@@ -15,6 +14,10 @@ export default class Main extends React.Component{
                 <div className="container main">
                     <div className="row">
                         <Header/>
+                    </div>
+                        
+                    <div className="preferencias">
+                        <Dashboard/>
                     </div>
 
                     <div className="row body">

@@ -16,8 +16,8 @@ export default class Formulary extends Component {
                             <label for="tamaño">¿De que tamaño prefiere su mascota?</label>
                         </div>
                         <div className="col-75">
-                            <select value={this.state.gender} onChange={this.onChangeGender} id="tamaño" name="tamaño">
-                                <option value="" selected disabled hidden>Escoja</option>
+                            <select onChange={this.onChangeGender} id="tamaño" name="tamaño">
+                                <option value="" selected disabled hidden></option>
                                 <option value="grande">Grande</option>
                                 <option value="mediana">Mediana</option>
                                 <option value="pequeña">Pequeña</option>
@@ -29,8 +29,8 @@ export default class Formulary extends Component {
                             <label for="actividad">¿Que actividades le gusta realizar?</label>
                         </div>
                         <div className="col-75">
-                            <select value={this.state.gender} onChange={this.onChangeGender} id="actividad" name="actividad">
-                                <option value="" selected disabled hidden>Escoja</option>
+                            <select onChange={this.onChangeGender} id="actividad" name="actividad">
+                                <option value="" selected disabled hidden></option>
                                 <option value="deporte">Deporte</option>
                                 <option value="series">Ver series</option>
                                 <option value="jugar">Jugar</option>
@@ -43,8 +43,8 @@ export default class Formulary extends Component {
                             <label for="mascota">¿Que que tipo de mascotas prefiere?</label>
                         </div>
                         <div className="col-75">
-                            <select value={this.state.gender} onChange={this.onChangeGender} id="mascota" name="mascota">
-                                <option value="" selected disabled hidden>Escoja</option>
+                            <select onChange={this.onChangeGender} id="mascota" name="mascota">
+                                <option value="" selected disabled hidden></option>
                                 <option value="perro">Perro</option>
                                 <option value="gato">Gato</option>
                                 <option value="otra">Otra</option>
@@ -57,8 +57,8 @@ export default class Formulary extends Component {
                             <label for="hijos">¿Tiene niños en su casa?</label>
                         </div>
                         <div className="col-75">
-                            <select value={this.state.gender} onChange={this.onChangeGender} id="hijos" name="hijos">
-                                <option value="" selected disabled hidden>Escoja</option>
+                            <select onChange={this.onChangeGender} id="hijos" name="hijos">
+                                <option value="" selected disabled hidden></option>
                                 <option value="si">Si</option>
                                 <option value="no">No</option>
                             </select>
