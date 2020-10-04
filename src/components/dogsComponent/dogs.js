@@ -26,7 +26,7 @@ export default class Dogs extends React.Component {
                     <br/>
 
                     <div className="botonStyle" >
-                        <a href="/main">
+                        <a href="/addpet">
                             {this.isUser && (<button id="color" className={"btn btn-outline btn-light btn-block "}>Interested in giving in adoption</button>)}
                         </a>
                     </div>
