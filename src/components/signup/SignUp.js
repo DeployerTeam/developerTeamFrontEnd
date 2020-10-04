@@ -20,7 +20,7 @@ class SignUp extends React.Component {
       phone: '',
       nameCompany:'',
       userName: '',
-      
+
     }
 
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -101,7 +101,7 @@ class SignUp extends React.Component {
             <form className="signup-form">
               <span className="signup-form-title">
                 <a href={"./"}>
-                  Appet  
+                  Appet
                 </a>
               </span>
 
@@ -114,37 +114,37 @@ class SignUp extends React.Component {
               </FormControl>
 
               <div className="wrap-input">
-                <input className="input" name="email" onChange={this.onChangeEmail}/>
+                <input className="input" name="email" onChange={this.onChangeEmail} required/>
                 <span className="focus-input"></span>
                 <span className="label-input">Mail</span>
               </div>
 
               <div className="wrap-input">
-                <input className="input" name="pass" onChange={this.onChangeUserName}/>
+                <input className="input" name="pass" onChange={this.onChangeUserName} required/>
                 <span className="focus-input"></span>
                 <span className="label-input">Name</span>
               </div>
 
               <div className="wrap-input">
-                <input className="input" type="password" name="pass" onChange={this.onChangePassword}/>
+                <input className="input" type="password" name="pass" onChange={this.onChangePassword} required/>
                 <span className="focus-input"></span>
                 <span className="label-input">Password</span>
               </div>
 
               <div className="wrap-input">
-                <input className="input" type="password" name="pass" onChange={this.onChangeConfirmPassword}/>
+                <input className="input" type="password" name="pass" onChange={this.onChangeConfirmPassword} required />
                 <span className="focus-input"></span>
                 <span className="label-input">Confirm Password</span>
               </div>
 
               <div className="wrap-input">
-                <input className="input" type="number" name="pass" onChange={this.onChangePhone}/>
+                <input className="input" type="number" name="pass" onChange={this.onChangePhone} required/>
                 <span className="focus-input"></span>
                 <span className="label-input">Phone</span>
               </div>
 
               <div className="wrap-input">
-                <input className="input" name="pass" onChange={this.onChangeNameCompany}/>
+                <input className="input" name="pass" onChange={this.onChangeNameCompany} required/>
                 <span className="focus-input"></span>
                 <span className="label-input">Company or foundation</span>
               </div>

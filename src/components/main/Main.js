@@ -6,18 +6,26 @@ import Dashboard from '../formularioPreferencias/dashboard';
 
 export default class Main extends React.Component{
 
+    constructor(props){
+      super(props);
+      let isUser;
+    }
+
 
 
     render(){
+        if(localStorage.getItem("isSupplier") === "false"){
+          this.isUser = true;
+        }
         return (
             <React.Fragment>
                 <div className="container main">
                     <div className="row">
                         <Header/>
                     </div>
-                        
+
                     <div className="preferencias">
-                        <Dashboard/>
+                        {this.isUser &&(<Dashboard/>)}
                     </div>
 
                     <div className="row body">

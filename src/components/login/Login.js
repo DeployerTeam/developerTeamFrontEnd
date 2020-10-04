@@ -2,18 +2,7 @@ import React from 'react';
 import './Login.css';
 import {API_BASE_URL_BACK} from '../../constants/index';
 import axios from 'axios';
-
-
-const required = value => {
-  if(!value){
-    return(
-      <div classNameName="alert alert-danger" role="alert">
-        Este campo es necesario
-      </div>
-    )
-  }
-}
-
+import { Redirect } from 'react-router-dom';
 
 
 class Login extends React.Component {
@@ -41,7 +30,10 @@ class Login extends React.Component {
       localStorage.setItem("localEmail", response.data.email);
       localStorage.setItem("token", response.data.accessToken);
       localStorage.setItem("tokenType", response.data.tokenType);
-    });
+      localStorage.setItem("isSupplier", response.data.isSupplier);
+      this.props.history.push("/");
+      window.location.reload();
+    })
   }
 
   onChangeUsername(event){
@@ -64,20 +56,20 @@ class Login extends React.Component {
   				<form className="login-form" onSubmit={this.handleSubmit}>
   					<span className="login-form-title">
                 <a href={"./"}>
-                  Appet  
+                  Appet
                 </a>
   					</span>
 
 
   					<div className="wrap-input">
-  						<input className="input" onChange={this.onChangeUsername} name="username"/>
+  						<input className="input" onChange={this.onChangeUsername} name="username" required/>
   						<span className="focus-input"></span>
   						<span className="label-input">Username</span>
   					</div>
 
 
   					<div className="wrap-input">
-  						<input className="input" type="password" onChange={this.onChangePassword} name="pass"/>
+  						<input className="input" type="password" onChange={this.onChangePassword} name="pass" required/>
   						<span className="focus-input"></span>
   						<span className="label-input">Password</span>
   					</div>

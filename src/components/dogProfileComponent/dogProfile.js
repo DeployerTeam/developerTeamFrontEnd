@@ -9,9 +9,15 @@ export default class DogProfile extends React.Component {
 
   constructor(props){
     super(props);
+    let isUser
+
   }
 
     render() {
+      if(localStorage.getItem("isSupplier") === "false"){
+        this.isUser = true;
+      }
+
         return(
             <React.Fragment>
                 <div className="general">
@@ -35,8 +41,8 @@ export default class DogProfile extends React.Component {
                         </div>
                     </div>
                     <div className="botonStyle2">
-                        <a href="/donation" id="color" className="btn btn float-left mr-2">Donate to foundation</a>
-                        <Dashboard/>
+                        {this.isUser && (<a href="/donation" id="color" className="btn btn float-left mr-2">Donate to foundation</a>)}
+                    {this.isUser && (<Dashboard/>)}
                     </div>
                 </div>
 
