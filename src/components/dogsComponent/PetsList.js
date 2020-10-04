@@ -1,25 +1,32 @@
 import React from 'react';
 import Pets from './Pets';
+import {API_BASE_URL_BACK} from '../../constants/index';
+import axios from 'axios';
 
 export default class PetsList extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      pets: [{}]
+    }
+  }
+
+  componentDidMount(){
+    this.getPets();
+  }
+
+  getPets(){
+    let petsInAdopt = axios.get(API_BASE_URL_BACK + '/pet/getpets')
+    .then( petsInAdopt => {
+      this.setState({pets : petsInAdopt.data})
+      console.log(this.state.pets);
+    })
   }
 
   render(){
-    const pets= [
-      {name: "Luke", image:"https://perritos882.files.wordpress.com/2016/12/cropped-imagenes-de-perritos-11.jpg"},
-      {name: "Rex", image:"https://pm1.narvii.com/7034/1130dd3ce1ed3bcaa2cf2dd16921dbd2e6664efdr1-720-287v2_uhq.jpg"},
-      {name: "Haku", image:"https://www.petdarling.com/articulos/wp-content/uploads/2014/10/perritos-aprenden-primera-vez-video.png?width=1200&enable=upscale"},
-      {name: "Bolt", image:"https://sumedico.blob.core.windows.net.optimalcdn.com/images/2020/05/13/cuidadosperrosschnauzer-focus-min0.03-0.46-983-557.jpg"},
-      {name: "Bolt", image:"https://sumedico.blob.core.windows.net.optimalcdn.com/images/2020/05/13/cuidadosperrosschnauzer-focus-min0.03-0.46-983-557.jpg"},
-      {name: "Bolt", image:"https://sumedico.blob.core.windows.net.optimalcdn.com/images/2020/05/13/cuidadosperrosschnauzer-focus-min0.03-0.46-983-557.jpg"},
-      {name: "Bolt", image:"https://sumedico.blob.core.windows.net.optimalcdn.com/images/2020/05/13/cuidadosperrosschnauzer-focus-min0.03-0.46-983-557.jpg"}
-    ]
-    const petsList = pets.map((pet, index) => {
-      return <Pets key={index} name={pet.name} image={pet.image}/>
-
-    });
+      const petsList = this.state.pets.map((pet, index) => {
+        return <Pets key={index} name={pet.petName} image={pet.image} gender={pet.gender} raza={pet.raza} edad={pet.edad} id={pet.id}/>
+      });
 
     return(
       <div>
