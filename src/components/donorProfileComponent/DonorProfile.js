@@ -56,9 +56,9 @@ export default class DonorProfile extends Component{
 
     render(){
         return(
-            
+
             <div className="container-fluid">
-                
+
                 <div className="row">
                         <Header />
                 </div>
@@ -112,7 +112,7 @@ export default class DonorProfile extends Component{
                                 Evaluar
                         </Button>
                         </ListItem>
-        
+
                     );
                 })}
                 </List>
