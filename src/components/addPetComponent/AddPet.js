@@ -11,7 +11,8 @@ export default class AddPet extends Component{
             userDonor : localStorage.getItem("localEmail"),
             image : '',
             gender : '',
-            raza : ''
+            raza : '',
+            edad: ''
         }
 
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -19,6 +20,7 @@ export default class AddPet extends Component{
         this.onChangeImage = this.onChangeImage.bind(this);
         this.onChangeGender = this.onChangeGender.bind(this);
         this.onChangeRaza = this.onChangeRaza.bind(this);
+        this.onChangeEdad = this.onChangeEdad.bind(this);
     }
 
     handleSubmit(event){
@@ -27,7 +29,8 @@ export default class AddPet extends Component{
                     userDonor:this.state.userDonor,
                     image:this.state.image,
                     gender:this.state.gender,
-                    raza:this.state.raza
+                    raza:this.state.raza,
+                    edad:this.state.edad
         }
         axios.post(API_BASE_URL_BACK + "/pet/add", pet)
     }
@@ -53,6 +56,12 @@ export default class AddPet extends Component{
     onChangeRaza(event){
         this.setState({
           raza : event.target.value
+        });
+    }
+
+    onChangeEdad(event){
+        this.setState({
+          edad : event.target.value
         });
     }
 
@@ -82,6 +91,15 @@ export default class AddPet extends Component{
                         </div>
                         <div className="col-75">
                             <input onChange={this.onChangeRaza} type="text" id="fname" name="firstname" placeholder="Raza"/>
+                        </div>
+                    </div>
+
+                    <div className="row">
+                        <div className="col-25">
+                            <label for="fname">Edad</label>
+                        </div>
+                        <div className="col-75">
+                            <input onChange={this.onChangeEdad} type="text" id="fname" name="firstname" placeholder="Edad"/>
                         </div>
                     </div>
 
