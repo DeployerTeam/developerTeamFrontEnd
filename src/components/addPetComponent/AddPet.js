@@ -2,6 +2,7 @@ import React,{Component} from 'react';
 import {API_BASE_URL_BACK} from '../../constants/index';
 import axios from 'axios';
 import Button from 'react-bootstrap/Button';
+import './AddPet.css';
 
 export default class AddPet extends Component{
     constructor(props){
@@ -67,8 +68,9 @@ export default class AddPet extends Component{
 
     render(){
         return(
-            <div className="container">
-                <form>
+            <div className="container containerl">
+                <form className="formulary">
+                <h1>Interested in giving adoption, please complete formulary</h1>
                     <div className="row">
                         <div className="col-25">
                             <label for="fname">Pet Name</label>
@@ -110,7 +112,7 @@ export default class AddPet extends Component{
                             <option value="female">Female</option>
                         </select>
                     </div>
-                    <Button onClick={this.handleSubmit} variant="primary">
+                    <Button className="botonSubmit btn btn-success" onClick={this.handleSubmit} >
                         Publish
                     </Button>
                 </form>

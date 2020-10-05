@@ -75,7 +75,7 @@ class Login extends React.Component {
   					</div>
 
   					<div className="container-login-form-btn">
-            <a className="vincule" href="#">You don't have account? Create one</a>
+            <a className="vincule" href="/signUp">You don't have account? Create one</a>
   						<button className="login-form-btn" type="submit">
   							SignIn
   						</button>

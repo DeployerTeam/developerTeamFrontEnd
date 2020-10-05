@@ -9,8 +9,11 @@ export default class DogProfile extends React.Component {
 
   constructor(props){
     super(props);
-    let isUser
-
+    let isUser;
+    this.state = {
+      pet: this.props.location.state.pets
+    }
+    console.log(this.state.pet)
   }
 
     render() {
@@ -29,15 +32,15 @@ export default class DogProfile extends React.Component {
                     </div>
                     <div className="row body cont">
                         <div className="col-12 col-md-6">
-                            <img className="img-thumbnail" id="imgPerfil" src="https://sumedico.blob.core.windows.net.optimalcdn.com/images/2020/05/13/cuidadosperrosschnauzer-focus-min0.03-0.46-983-557.jpg"></img>
+                            <img className="img-thumbnail" id="imgPerfil" src={this.state.pet.image}></img>
                         </div>
                         <div className="col-12 col-md-6" style={{color: "#fff"}}>
-                            <h1><dt>Bolt's description</dt></h1>
+                            <h1><dt>{this.state.pet.name+ " " + "Description"}</dt></h1>
                             <br/>
-                            <h4 className="font-weight-light font">Sexo: Macho</h4>
-                            <h4 className="font-weight-light">Raza: Schnauzer</h4>
-                            <h4 className="font-weight-light">Edad: 2 años</h4>
-                            <h4 className="font-weight-light">Ubicación: Bogotá</h4>
+                            <h4 className="font-weight-light font">Gender : {this.state.pet.gender}</h4>
+                            <h4 className="font-weight-light">Breed: {this.state.pet.raza}</h4>
+                            <h4 className="font-weight-light">Age: {this.state.pet.edad}</h4>
+                            {/**<h4 className="font-weight-light">Ubicación: Bogotá</h4>**/}
                         </div>
                     </div>
                     <div className="botonStyle2">
