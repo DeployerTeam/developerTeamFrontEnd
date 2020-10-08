@@ -18,6 +18,9 @@ import CloseIcon from '@material-ui/icons/Close';
 import Header from '../headerComponent/header'
 import './DonorProfile.css';
 
+import {API_BASE_URL_BACK} from '../../constants/index';
+import axios from 'axios';
+
 import { AdoptionRequest } from './AdoptionRequest';
 
 
@@ -29,13 +32,28 @@ export default class DonorProfile extends Component{
     constructor(props){
         super(props);
         this.state = {
-            open : false
+            open : false,
+            forms : [{}]
         }
         this.setOpen = this.setOpen.bind(this);
+        this.getForms = this.getForms.bind(this);
         this.handleClickOpen = this.handleClickOpen.bind(this);
         this.handleClickClose = this.handleClickClose.bind(this);
 
     }
+
+    componentDidMount(){
+        this.getForms();
+      }
+    
+    getForms(){
+        let formsOfAdopt = axios.get(API_BASE_URL_BACK + '/user/getforms?id=' + localStorage.getItem("localEmail"))
+        .then( formsOfAdopt => {
+          this.setState({forms : formsOfAdopt.data})
+          console.log(this.state.forms);
+        })
+      }
+
 
     setOpen(action){
         console.log(action)
@@ -65,7 +83,8 @@ export default class DonorProfile extends Component{
                 <br/>
                 <h1 className="my-5 text-white text-center">Request for adoption</h1>
                 <List dense className="container-donor " style={{"margin-top":"2%"}}>
-                {[0, 1, 2, 3].map((value) => {
+
+                {this.state.forms.map((form, value) => {
                 const labelId = `checkbox-list-secondary-label-${value}`;
                 return (
                         <ListItem key={value} className="donor">
