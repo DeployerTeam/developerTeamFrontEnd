@@ -20,7 +20,7 @@ export default () => (
             <Route path="/signIn" exact component={Login} />
             <Route path="/signUp" exact component={SignUp} />
             <Route path="/adoption" exact component={Dogs} />
-            <Route path="/dogprofile" exact component={DogProfile}/>
+            <Route path="/dogprofile/:id" exact component={DogProfile}/>
             <Route path="/alliances" exact component={AllianceDashboard}/>
             <Route path="/allianceprofile" exact component={AllianceClientPage}/>
             <Route path="/donorprofile" exact component={DonorProfile}/>

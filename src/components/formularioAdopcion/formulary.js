@@ -6,8 +6,9 @@ import {API_BASE_URL_BACK} from '../../constants/index';
 export default class Formulary extends Component {
     constructor(props){
         super(props);
-
+        
         this.state = {
+            idPet: window.location.pathname.split("/")[2],
             name : '',
             age : '',
             gender : '',
@@ -25,7 +26,7 @@ export default class Formulary extends Component {
             pets: '',
             financially: ''    
         }
-        
+        console.log(this.state.idPet);
         this.handleSubmit = this.handleSubmit.bind(this);
         this.onChangeName = this.onChangeName.bind(this);
         this.onChangeAge = this.onChangeAge.bind(this);
@@ -48,8 +49,10 @@ export default class Formulary extends Component {
 
     handleSubmit(event){
         event.preventDefault();
+        console.log(this.state.idPet + " Este es el id del perrito")
 
         const adoptForm = {
+            idPet : this.state.idPet,
             name : this.state.name,
             age : this.state.age,
             gender : this.state.gender,
