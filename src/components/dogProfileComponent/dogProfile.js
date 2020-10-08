@@ -3,7 +3,7 @@ import React from 'react';
 import Header from '../headerComponent/header';
 import './dogProfile.css';
 import Dashboard from '../formularioAdopcion/dashboard';
-import Breadcrumb from 'react-bootstrap/Breadcrumb';
+
 
 export default class DogProfile extends React.Component {
 
@@ -13,7 +13,7 @@ export default class DogProfile extends React.Component {
     this.state = {
       pet: this.props.location.state.pets
     }
-    console.log(this.state.pet)
+    console.log(this.state.pet.id)
   }
 
     render() {
