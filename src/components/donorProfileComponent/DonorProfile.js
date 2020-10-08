@@ -111,12 +111,13 @@ export default class DonorProfile extends Component{
 
 
                                     <DialogContent>
-                                        <AdoptionRequest id={value}/>  {/* Una vez se utilice el back se usara el id de la solicitud para extraer los datos */}
+                                        <AdoptionRequest dataform={form}/>  {/* Una vez se utilice el back se usara el id de la solicitud para extraer los datos */}
                                         <Button autoFocus onClick={this.handleClickClose} color="primary">
                                             Check as read
-                                        </Button>
+                                        </Button>                                      
                                     </DialogContent>
-
+                                    
+                                
 
                                 </Dialog>
                             </div>
