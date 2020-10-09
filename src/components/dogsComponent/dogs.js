@@ -31,10 +31,10 @@ export default class Dogs extends React.Component {
 
                     <div className="botonStyle" >
 
-                            {this.isUser && (<a id="color" href="/addpet" className={"btn btn-outline btn-light btn-block "}>Interested in giving in adoption</a>)}
+                            {this.isUser && (<a id="color" href="/addpet" className={"btn btn-outline btn-light btn-block "}>Interesado en dar en adopción</a>)}
 
 
-                            {!this.isUser && !this.isSupplier && (<a id="color" href="/signin" className={"btn btn-outline btn-light btn-block "}>Interested in giving in adoption</a>)}
+                            {!this.isUser && !this.isSupplier && (<a id="color" href="/signin" className={"btn btn-outline btn-light btn-block "}>Interesado en dar en adopción</a>)}
                           
 
 

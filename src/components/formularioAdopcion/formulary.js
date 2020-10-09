@@ -194,7 +194,7 @@ export default class Formulary extends Component {
                     <form onSubmit={this.handleSubmit}>
                         <div className="row">
                             <div className="col-25">
-                                <label for="fname">Name</label>
+                                <label for="fname">Nombre</label>
                             </div>
                             <div className="col-75">
                                 <input onChange={this.onChangeName} type="text" id="fname" name="firstname" placeholder="Complete Name.." required/>
@@ -202,7 +202,7 @@ export default class Formulary extends Component {
                         </div>
                         <div className="row">
                             <div className="col-25">
-                                <label for="age">Age</label>
+                                <label for="age">Edad</label>
                             </div>
                             <div className="col-75">
                                 <input onChange={this.onChangeAge} type="text" id="age" name="age" placeholder="Age.." required/>
@@ -210,20 +210,20 @@ export default class Formulary extends Component {
                         </div>
                         <div className="row">
                             <div className="col-25">
-                                <label for="gender">Gender</label>
+                                <label for="gender">Genero</label>
                             </div>
                             <div className="col-75">
                                 <select value={this.state.gender} onChange={this.onChangeGender} id="gender" name="gender" required>
-                                    <option value="" selected disabled hidden>Choose here</option>
-                                    <option value="male">Male</option>
-                                    <option value="female">Female</option>
-                                    <option value="other">Other</option>
+                                    <option value="" selected disabled hidden>Seleccione</option>
+                                    <option value="male">Masculino</option>
+                                    <option value="female">Femenino</option>
+                                    <option value="other">Otro</option>
                                 </select>
                             </div>
                         </div>
                         <div className="row">
                             <div className="col-25">
-                                <label for="pNumber">Phone Number</label>
+                                <label for="pNumber">Numero telefonico</label>
                             </div>
                             <div className="col-75">
                                 <input onChange={this.onChangePhone} type="text" id="pNumber" name="pNumber" placeholder="Phone Number.." required/>
@@ -239,7 +239,7 @@ export default class Formulary extends Component {
                         </div>
                         <div className="row">
                             <div className="col-25">
-                                <label for="city">City</label>
+                                <label for="city">Ciudad</label>
                             </div>
                             <div className="col-75">
                                 <input onChange={this.onChangeCity} type="text" id="city" name="city" placeholder="City.." required/>
@@ -247,7 +247,7 @@ export default class Formulary extends Component {
                         </div>
                         <div className="row">
                             <div className="col-25">
-                                <label for="address">Address</label>
+                                <label for="address">Dirección</label>
                             </div>
                             <div className="col-75">
                                 <input onChange={this.onChangeAddress} type="text" id="address" name="address" placeholder="Address.." required/>
@@ -255,44 +255,44 @@ export default class Formulary extends Component {
                         </div>
                         <div className="row">
                             <div className="col-25">
-                                <label for="occupation">Occupation</label>
+                                <label for="occupation">Ocupación</label>
                             </div>
                             <div className="col-75">
                                 <select value={this.state.occupation} onChange={this.onChangeOccupation} id="occupation" name="occupation" required>
-                                    <option value="" selected disabled hidden>Choose here</option>
-                                    <option value="student">Studing</option>
-                                    <option value="employ">Employed</option>
-                                    <option value="unemploy">Unemployed</option>
+                                    <option value="" selected disabled hidden>Seleccione</option>
+                                    <option value="student">Estudiante</option>
+                                    <option value="employ">Empleado</option>
+                                    <option value="unemploy">Desempleado</option>
                                 </select>
                             </div>
                         </div>
                         <div className="row">
                             <div className="col-25">
-                                <label for="lPlace">Type of Living Place</label>
+                                <label for="lPlace">Tipo de vivienda</label>
                             </div>
                             <div className="col-75">
                                 <select value={this.state.typePlace} onChange={this.onChangeTypePlace} id="lPlace" name="lPlace" required>
-                                    <option value="" selected disabled hidden>Choose here</option>
-                                    <option value="house">House</option>
-                                    <option value="apartment">Apartment</option>
+                                    <option value="" selected disabled hidden>Seleccione</option>
+                                    <option value="house">Casa</option>
+                                    <option value="apartment">Apartamento</option>
                                 </select>
                             </div>
                         </div>
                         <div className="row">
                             <div className="col-25">
-                                <label for="ownerRent">Owner or Rent</label>
+                                <label for="ownerRent">Propietario o Arrendatario</label>
                             </div>
                             <div className="col-75">
                                 <select value={this.state.ownerOrRent} onChange={this.onChangeOwnerOrRent} id="ownerRent" name="ownerRent" required>
-                                    <option value="" selected disabled hidden>Choose here</option>
-                                    <option value="owner">Owner</option>
-                                    <option value="rent">Rent</option>
+                                    <option value="" selected disabled hidden>Seleccione</option>
+                                    <option value="owner">Propietario</option>
+                                    <option value="rent">Arrendatario</option>
                                 </select>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-25">
-                                <label for="whyAdopt">Why you want to adopt a pet?</label>
+                                <label for="whyAdopt">¿Por qué quiere adoptar?</label>
                             </div>
                             <div class="col-75">
                                 <textarea id="whyAdopt" name="whyAdopt" placeholder="Write your answer.." required></textarea>
@@ -300,43 +300,43 @@ export default class Formulary extends Component {
                         </div>
                         <div className="row">
                             <div className="col-25">
-                                <label for="allowPet">Are pets allowed in your living place?</label>
+                                <label for="allowPet">¿Las mascotas son permitidas en su vivienda?</label>
                             </div>
                             <div className="col-75">
                                 <select value={this.state.allowed} onChange={this.onChangeAllowed} id="allowPet" name="allowPet" required>
-                                    <option value="" selected disabled hidden>Choose here</option>
-                                    <option value="yes">Yes</option>
+                                    <option value="" selected disabled hidden>Seleccione</option>
+                                    <option value="yes">Si</option>
                                     <option value="no">No</option>
                                 </select>
                             </div>
                         </div>
                         <div className="row">
                             <div className="col-25">
-                                <label for="allergic">Is someone in your living place allergic to pet's fur?</label>
+                                <label for="allergic">¿Alguien en su vivienda es alergico a las mascotas?</label>
                             </div>
                             <div className="col-75">
                                 <select value={this.state.allergic} onChange={this.onChangeAllergic} id="allergic" name="allergic" required>
-                                    <option value="" selected disabled hidden>Choose here</option>
-                                    <option value="yes">Yes</option>
+                                    <option value="" selected disabled hidden>Seleccione</option>
+                                    <option value="yes">Si</option>
                                     <option value="no">No</option>
                                 </select>
                             </div>
                         </div>
                         <div className="row">
                             <div className="col-25">
-                                <label for="space">You have enough space in your living place for a pet?</label>
+                                <label for="space">¿Tiene suficiente espacio para una mascota?</label>
                             </div>
                             <div className="col-75">
                                 <select value={this.state.space} onChange={this.onChangeSpace} id="space" name="space" required>
-                                    <option value="" selected disabled hidden>Choose here</option>
-                                    <option value="yes">Yes</option>
+                                    <option value="" selected disabled hidden>Seleccione</option>
+                                    <option value="yes">Si</option>
                                     <option value="no">No</option>
                                 </select>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-25">
-                                <label for="subject">Have you got any pets? (Number, type, age) </label>
+                                <label for="subject">¿Tiene alguna mascota? (Cantidad, tipo, edad) </label>
                             </div>
                             <div class="col-75">
                                 <textarea id="subject" onChange={this.onChangePets} name="subject" placeholder="Write your answer.." required></textarea>
@@ -344,7 +344,7 @@ export default class Formulary extends Component {
                         </div>
                         <div class="row">
                             <div class="col-25">
-                                <label for="subject">Are you financially stable? if not who is going to pay for the needs of your pet? </label>
+                                <label for="subject">¿Es financieramente estable? si no ¿Quien va a hacerse cargo de los gastos? </label>
                             </div>
                             <div class="col-75">
                                 <textarea id="subject" onChange={this.onChangeFinancially} name="subject" placeholder="Write your answer.." required></textarea>
@@ -352,7 +352,7 @@ export default class Formulary extends Component {
                         </div>
 
                             <Button type="submit" variant="primary">
-                                Submit
+                                Enviar
                             </Button>
 
                     </form>

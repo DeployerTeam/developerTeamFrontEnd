@@ -19,7 +19,7 @@ export default class AllianceOwnerPage extends React.Component {
                       <Header />
                     </div>
                     <div className="back">
-                      <a href="/alliances" className="btn btn-primary">Back</a>
+                      <a href="/alliances" className="btn btn-primary">Atras</a>
                     </div>
                     <div className="allianceName">
                       <h1><dt>VetStore</dt></h1>
@@ -36,12 +36,12 @@ export default class AllianceOwnerPage extends React.Component {
                     </div>
                     <div className="info" style={{color: "#fff"}}>
                             <h4 className="font-weight-light font">Dirección: Cll 170</h4>
-                            <h4 className="font-weight-light">Service: Market</h4>
-                            <h4 className="font-weight-light">Phone: +57 111 1111111</h4>
+                            <h4 className="font-weight-light">Servicio: Market</h4>
+                            <h4 className="font-weight-light">Telefono: +57 111 1111111</h4>
                             <h4 className="font-weight-light">E-mail: vetstore@vetsrore.com</h4>
                             <br/>
                             <Button variant="primary" >
-                              Edit Information
+                              Editar información
                             </Button>
                     </div>
 

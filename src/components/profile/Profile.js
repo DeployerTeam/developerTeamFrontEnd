@@ -28,7 +28,7 @@ export default class Profile extends Component {
             <form >
               <div className="row">
                 <div className="col-25">
-                  <label for="fname">Name</label>
+                  <label for="fname">Nombre</label>
                 </div>
                 <div className="col-75">
                   <input type="text" id="fname" name="firstname" placeholder="Complete Name.."/>
@@ -36,7 +36,7 @@ export default class Profile extends Component {
               </div>
               <div className="row">
                 <div className="col-25">
-                  <label for="age">Age</label>
+                  <label for="age">Edad</label>
                 </div>
                 <div className="col-75">
                   <input type="text" id="age" name="age" placeholder="Age.."/>
@@ -44,20 +44,20 @@ export default class Profile extends Component {
               </div>
               <div className="row">
                 <div className="col-25">
-                  <label for="gender">Gender</label>
+                  <label for="gender">Genero</label>
                 </div>
                 <div className="col-75">
                   <select id="gender" name="gender">
-                    <option value="" selected disabled hidden>Choose here</option>
-                    <option value="australia">Male</option>
-                    <option value="canada">Female</option>
-                    <option value="usa">Other</option>
+                    <option value="" selected disabled hidden>Seleccione</option>
+                    <option value="australia">Masculino</option>
+                    <option value="canada">Femenino</option>
+                    <option value="usa">Otro</option>
                   </select>
                 </div>
               </div>                        
               <div className="row">
                 <div className="col-25">
-                  <label for="pNumber">Phone Number</label>
+                  <label for="pNumber">Numero telefonico</label>
                 </div>
                 <div className="col-75">
                   <input type="text" id="pNumber" name="pNumber" placeholder="Phone Number.."/>
@@ -73,7 +73,7 @@ export default class Profile extends Component {
               </div>                        
               <div className="row">
                 <div className="col-25">
-                  <label for="city">City</label>
+                  <label for="city">Ciudad</label>
                 </div>
                 <div className="col-75">
                   <input type="text" id="city" name="city" placeholder="City.."/>
@@ -81,7 +81,7 @@ export default class Profile extends Component {
               </div>
               <div className="row">
                 <div className="col-25">
-                  <label for="address">Address</label>
+                  <label for="address">Dirección</label>
                 </div>
                 <div className="col-75">
                   <input type="text" id="address" name="address" placeholder="Address.."/>

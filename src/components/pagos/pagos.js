@@ -18,7 +18,7 @@ export default class Pagos extends React.Component{
                             <Card>
                                 
                                 <CardContent>
-                                <h1>DONATIONS</h1>
+                                <h1>DONACIONES</h1>
                                     <form noValidate autoComplete="off">
                                         <div>
                                             <TextField 

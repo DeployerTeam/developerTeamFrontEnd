@@ -17,7 +17,7 @@ export default class Formulary extends Component {
                         </div>
                         <div className="col-75">
                             <select onChange={this.onChangeGender} id="tamaño" name="tamaño">
-                                <option value="" selected disabled hidden></option>
+                                <option value="" selected disabled hidden>Seleccione</option>
                                 <option value="grande">Grande</option>
                                 <option value="mediana">Mediana</option>
                                 <option value="pequeña">Pequeña</option>
@@ -30,7 +30,7 @@ export default class Formulary extends Component {
                         </div>
                         <div className="col-75">
                             <select onChange={this.onChangeGender} id="actividad" name="actividad">
-                                <option value="" selected disabled hidden></option>
+                                <option value="" selected disabled hidden>Seleccione</option>
                                 <option value="deporte">Deporte</option>
                                 <option value="series">Ver series</option>
                                 <option value="jugar">Jugar</option>
@@ -44,7 +44,7 @@ export default class Formulary extends Component {
                         </div>
                         <div className="col-75">
                             <select onChange={this.onChangeGender} id="mascota" name="mascota">
-                                <option value="" selected disabled hidden></option>
+                                <option value="" selected disabled hidden>Seleccione</option>
                                 <option value="perro">Perro</option>
                                 <option value="gato">Gato</option>
                                 <option value="otra">Otra</option>
@@ -58,14 +58,14 @@ export default class Formulary extends Component {
                         </div>
                         <div className="col-75">
                             <select onChange={this.onChangeGender} id="hijos" name="hijos">
-                                <option value="" selected disabled hidden></option>
+                                <option value="" selected disabled hidden>Seleccione</option>
                                 <option value="si">Si</option>
                                 <option value="no">No</option>
                             </select>
                         </div>
                     </div>
                     <Button variant="primary">
-                        Submit
+                        Enviar
                     </Button>
                 </form>
             </div>
