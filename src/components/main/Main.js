@@ -9,14 +9,13 @@ export default class Main extends React.Component{
     constructor(props){
       super(props);
       let isUser;
+      let isSupplier;
     }
 
 
 
     render(){
-        if(localStorage.getItem("isSupplier") === "false"){
-          this.isUser = true;
-        }
+        
         return (
             <React.Fragment>
                 <div className="container main">
@@ -25,7 +24,7 @@ export default class Main extends React.Component{
                     </div>
 
                     <div className="preferencias">
-                        {this.isUser &&(<Dashboard/>)}
+                        <Dashboard/>
                     </div>
 
                     <div className="row body">

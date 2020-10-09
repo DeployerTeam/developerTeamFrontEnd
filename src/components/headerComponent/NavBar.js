@@ -3,12 +3,12 @@ import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import Dashboard from '../profile/dashboard';
 import AllyDashboard from '../profile/AllyDashboard';
+import Swal from 'sweetalert2';
 
 
 
 
-
-export default function PrimarySearchAppBar() {
+export default function PrimarySearchAppBar(props) {
   let isSupplier;
   let isUser;
   if(localStorage.getItem("isSupplier") !== null){
@@ -44,7 +44,7 @@ export default function PrimarySearchAppBar() {
               Signup
             </Nav.Link>)}
             {localStorage.getItem("token") && (
-            <Nav.Link eventKey={2} href="/signin" onClick={() => localStorage.clear()}>
+            <Nav.Link eventKey={2}  onClick={logout}>
               Logout
             </Nav.Link>)}
           </Nav>
@@ -52,4 +52,16 @@ export default function PrimarySearchAppBar() {
       </Navbar>
     </div>
   );
+}
+
+async function logout(){
+  await Swal.fire({
+    title: 'Cierre de sesión exitoso!',
+    type: 'success',
+    icon: 'success',
+    text: `Sesión cerrada con exito ${localStorage.getItem("localEmail")}`,
+  })
+  localStorage.clear();
+  window.location.reload();
+
 }
