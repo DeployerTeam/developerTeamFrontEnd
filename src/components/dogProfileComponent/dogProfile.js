@@ -28,7 +28,7 @@ export default class DogProfile extends React.Component {
                         <Header />
                     </div>
                     <div className="back">
-                      <a href="/adoption" className="btn btn-primary">Back</a>
+                      <a href="/adoption" className="btn btn-primary">Atras</a>
                     </div>
                     <div className="row body cont">
                         <div className="col-12 col-md-6">
@@ -37,14 +37,14 @@ export default class DogProfile extends React.Component {
                         <div className="col-12 col-md-6" style={{color: "#fff"}}>
                             <h1><dt>{this.state.pet.name+ " " + "Description"}</dt></h1>
                             <br/>
-                            <h4 className="font-weight-light font">Gender : {this.state.pet.gender}</h4>
-                            <h4 className="font-weight-light">Breed: {this.state.pet.raza}</h4>
-                            <h4 className="font-weight-light">Age: {this.state.pet.edad}</h4>
+                            <h4 className="font-weight-light font">Genero : {this.state.pet.gender}</h4>
+                            <h4 className="font-weight-light">Raza: {this.state.pet.raza}</h4>
+                            <h4 className="font-weight-light">Edad: {this.state.pet.edad}</h4>
                             {/**<h4 className="font-weight-light">Ubicación: Bogotá</h4>**/}
                         </div>
                     </div>
                     <div className="botonStyle2">
-                        <a href="/donation" id="color" className="btn btn float-left mr-2">Donate to foundation</a>
+                        <a href="/donation" id="color" className="btn btn float-left mr-2">Donar a fundación</a>
                     <Dashboard/>
                     </div>
                 </div>

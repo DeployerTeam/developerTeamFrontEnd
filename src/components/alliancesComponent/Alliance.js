@@ -16,7 +16,7 @@ export default class Alliance extends React.Component {
                         <h5 className="card-title"> {"$ " + this.props.price} </h5>
                         <div className="card-text"> {this.props.description} </div>
                         <br/>
-                        <a href="/allianceprofile" className="btn btn-primary">See Profile</a>
+                        <a href="/allianceprofile" className="btn btn-primary">Ver perfil</a>
                     </div>
                 </div>
             <br/>

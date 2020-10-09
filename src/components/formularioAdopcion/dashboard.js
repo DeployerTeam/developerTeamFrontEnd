@@ -37,11 +37,11 @@ export default class Dashboard extends Component {
           <p>Data</p>
         </ModalFormulary>
         {this.isUser && (<Button variant="primary" onClick={this.showModal}>
-          Adopt
+          Adoptar
         </Button>)}
 
         {!this.isUser && !this.isSupplier && (<Button variant="primary" href="/signin">
-          Adopt
+          Adoptar
         </Button>)}
 
 
@@ -57,14 +57,14 @@ const ModalFormulary = ({ handleClose, show, children }) => {
       <div className={showHideClassName}>
         <Modal size="lg" show={show} onHide={handleClose}>
             <Modal.Header closeButton>
-                <Modal.Title>Adoption Form</Modal.Title>
+                <Modal.Title>Formulario de adopción</Modal.Title>
             </Modal.Header>
             <Modal.Body>
                 <Formulary />
             </Modal.Body>
             <Modal.Footer>
                 <Button variant="secondary" onClick={handleClose}>
-                    Close
+                    Cerrar
                 </Button>
             </Modal.Footer>
         </Modal>

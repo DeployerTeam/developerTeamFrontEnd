@@ -136,53 +136,53 @@ class SignUp extends React.Component {
               </span>
 
               <FormControl className="radio-user" component="fieldset">
-                  <FormLabel component="legend" style={{color: "#fff", "font-size":"20px"}}>Type</FormLabel>
+                  <FormLabel component="legend" style={{color: "#fff", "font-size":"20px"}}>Tipo</FormLabel>
                   <RadioGroup aria-label="gender" name="gender1" value={this.state.type} onChange={this.handleChangeType}>
-                  <FormControlLabel value="user" control={<Radio />} label="User" />
-                  <FormControlLabel value="company" control={<Radio />} label="Company" />
+                  <FormControlLabel value="user" control={<Radio />} label="Usuario" />
+                  <FormControlLabel value="company" control={<Radio />} label="Compañia" />
                   </RadioGroup>
               </FormControl>
 
               <div className="wrap-input">
                 <input className="input" name="email" onChange={this.onChangeEmail} required/>
                 <span className="focus-input"></span>
-                <span className="label-input">Mail</span>
+                <span className="label-input">E-Mail</span>
               </div>
 
               {this.state.type ==='user' && (<div className="wrap-input">
                 <input className="input" name="pass" onChange={this.onChangeUserName} required/>
                 <span className="focus-input"></span>
-                <span className="label-input">Name</span>
+                <span className="label-input">Nombre</span>
               </div>)}
 
               <div className="wrap-input">
                 <input className="input" type="password" name="pass" onChange={this.onChangePassword} required/>
                 <span className="focus-input"></span>
-                <span className="label-input">Password</span>
+                <span className="label-input">Contraseña</span>
               </div>
 
               <div className="wrap-input">
                 <input className="input" type="password" name="pass" onChange={this.onChangeConfirmPassword} required />
                 <span className="focus-input"></span>
-                <span className="label-input">Confirm Password</span>
+                <span className="label-input">Confirmación de contraseña</span>
               </div>
 
               <div className="wrap-input">
                 <input className="input" type="number" name="pass" onChange={this.onChangePhone} required/>
                 <span className="focus-input"></span>
-                <span className="label-input">Phone</span>
+                <span className="label-input">Numero telefonico</span>
               </div>
 
               {this.state.type==='company' && (<div className="wrap-input">
                 <input className="input" name="pass" onChange={this.onChangeNameCompany} required/>
                 <span className="focus-input"></span>
-                <span className="label-input">Company or foundation</span>
+                <span className="label-input">Compañia o fundación</span>
               </div>)}
 
               <div className="container-signup-form-btn">
-              <a className="vincule" href="#">Info</a>
+              <a className="vincule" href="#">Información</a>
                 <button className="signup-form-btn" type="submit">
-                  SignUp
+                  Crear
                 </button>
               </div>
           </form>

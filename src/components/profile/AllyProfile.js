@@ -28,7 +28,7 @@ export default class AllyProfile extends Component {
             <form >
               <div className="row">
                 <div className="col-25">
-                  <label for="fname">Company Name</label>
+                  <label for="fname">Nombre de la empresa</label>
                 </div>
                 <div className="col-75">
                   <input type="text" id="cname" name="companyname" placeholder="Complete Name..."/>
@@ -36,7 +36,7 @@ export default class AllyProfile extends Component {
               </div>                 
               <div className="row">
                 <div className="col-25">
-                  <label for="pNumber">Phone Number</label>
+                  <label for="pNumber">Numero telefonico</label>
                 </div>
                 <div className="col-75">
                   <input type="text" id="pNumber" name="pNumber" placeholder="Phone Number..."/>
@@ -52,7 +52,7 @@ export default class AllyProfile extends Component {
               </div>                        
               <div className="row">
                 <div className="col-25">
-                  <label for="city">City</label>
+                  <label for="city">Ciudad</label>
                 </div>
                 <div className="col-75">
                   <input type="text" id="city" name="city" placeholder="City..."/>
@@ -60,7 +60,7 @@ export default class AllyProfile extends Component {
               </div>
               <div className="row">
                 <div className="col-25">
-                  <label for="address">Address</label>
+                  <label for="address">Dirección</label>
                 </div>
                 <div className="col-75">
                   <input type="text" id="address" name="address" placeholder="Address..."/>

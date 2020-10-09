@@ -40,7 +40,7 @@ export default class AllianceDashboard extends React.Component{
               <div className="input-group mb-3">
                 <input type="text" onChange={this.handleChangeSearchBar} className="form-control" placeholder="Alliances" aria-label="Alliances" aria-describedby="button-addon2" />
                 <div className="input-group-append">
-                  <button className="btn btn-dark" type="submit" id="search">Search</button>
+                  <button className="btn btn-dark" type="submit" id="search">Buscar</button>
                 </div>
               </div>
             </form>

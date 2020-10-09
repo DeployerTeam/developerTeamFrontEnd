@@ -58,14 +58,14 @@ const ModalFormulary = ({ handleClose, show, children }) => {
       <div className={showHideClassName}>
         <Modal size="lg" show={show} onHide={handleClose}>
             <Modal.Header closeButton>
-                <Modal.Title>Adoption Form</Modal.Title>
+                <Modal.Title>Formulario de Preferencias</Modal.Title>
             </Modal.Header>
             <Modal.Body>
                 <Formulary />
             </Modal.Body>
             <Modal.Footer>
                 <Button variant="secondary" onClick={handleClose}>
-                    Close
+                    Cerrar
                 </Button>
             </Modal.Footer>
         </Modal>

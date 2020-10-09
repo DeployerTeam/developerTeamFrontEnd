@@ -82,20 +82,20 @@ class Login extends React.Component {
   					<div className="wrap-input">
   						<input id="username" className="input" onChange={this.onChangeUsername} name="username" required/>
   						<span className="focus-input"></span>
-  						<span className="label-input">Username</span>
+  						<span className="label-input">Nombre de Usuario</span>
   					</div>
 
 
   					<div className="wrap-input">
   						<input id="password" className="input" type="password" onChange={this.onChangePassword} name="pass" required/>
   						<span className="focus-input"></span>
-  						<span className="label-input">Password</span>
+  						<span className="label-input">Contraseña</span>
   					</div>
 
   					<div className="container-login-form-btn">
-            <a className="vincule" href="/signUp">You don't have account? Create one</a>
+            <a className="vincule" href="/signUp">¿No tiene cuenta? Cree una</a>
   						<button className="login-form-btn" type="submit">
-  							SignIn
+  							Entrar
   						</button>
   					</div>
 				</form>

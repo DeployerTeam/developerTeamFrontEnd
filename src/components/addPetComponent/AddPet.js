@@ -89,10 +89,10 @@ export default class AddPet extends Component{
         return(
             <div className="container containerl">
                 <form className="formulary" onSubmit={this.handleSubmit}>
-                <h1>Interested in giving adoption, please complete formulary</h1>
+                <h1>Si está interesado en dar en adopción, por favor llene el formulario</h1>
                     <div className="row">
                         <div className="col-25">
-                            <label for="fname">Pet Name</label>
+                            <label for="fname">Nombre de la mascota</label>
                         </div>
                         <div className="col-75">
                             <input onChange={this.onChangePetName} type="text" id="fname" name="firstname" placeholder="Complete Name.." required/>
@@ -100,7 +100,7 @@ export default class AddPet extends Component{
                     </div>
                     <div className="row">
                         <div className="col-25">
-                            <label for="fname">URL Image</label>
+                            <label for="fname">URL de la imagen</label>
                         </div>
                         <div className="col-75">
                             <input onChange={this.onChangeImage} type="text" id="fname" name="firstname" placeholder="URL image" required/>
@@ -126,13 +126,13 @@ export default class AddPet extends Component{
 
                     <div className="col-75">
                         <select value={this.state.gender} onChange={this.onChangeGender} id="gender" name="gender" required>
-                            <option value="" selected disabled hidden>Choose here</option>
-                            <option value="male">Male</option>
-                            <option value="female">Female</option>
+                            <option value="" selected disabled hidden>Seleccione</option>
+                            <option value="male">Macho</option>
+                            <option value="female">Hembra</option>
                         </select>
                     </div>
                     <Button className="botonSubmit btn btn-success" type="submit">
-                        Publish
+                        Publicar
                     </Button>
                 </form>
             </div>

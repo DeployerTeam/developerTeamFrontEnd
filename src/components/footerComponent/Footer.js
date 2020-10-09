@@ -10,7 +10,7 @@ export default class Footer extends React.Component {
       <footer className="footer">
 
         <div class="inner">
-            <p>@2020 | All rights reserved - by DeployerTeam.</p>
+            <p>@2020 | Derechos reservados - by DeployerTeam.</p>
         </div>
       </footer>
     )
