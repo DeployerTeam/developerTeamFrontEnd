@@ -2,6 +2,7 @@ import React from 'react';
 import './SignUp.css';
 import {API_BASE_URL_BACK} from '../../constants/index';
 import axios from 'axios';
+import Swal from 'sweetalert2';
 
 import Radio from '@material-ui/core/Radio';
 import RadioGroup from '@material-ui/core/RadioGroup';
@@ -36,17 +37,46 @@ class SignUp extends React.Component {
 
   handleSubmit(event){
     event.preventDefault();
-
-    if(this.state.type == "user"){
-      let user = { email:this.state.email, name:this.state.name, password:this.state.password, phone:this.state.phone}
-      axios.post(API_BASE_URL_BACK + "/user/create", user)
-      .then(res => { console.log("Creando Usuario")})
-    } else if (this.state.type == "company") {
-      let provider = { email:this.state.email, password:this.state.password, phone:this.state.phone, nameCompany:this.state.nameCompany}
-      axios.post(API_BASE_URL_BACK + "/proveedores/create", provider)
-      .then(res => { console.log("Creando Proveedor")})
+    if(this.state.password !== this.state.confirmPassword){
+       Swal.fire({
+          title: 'Error de contraseñas',
+          type: 'error',
+          icon: 'error',
+          confirmButtonColor: '#3085d6',
+          text: `Las contraseñas no coinciden`,
+      })
+    }else{
+      if(this.state.type == "user"){
+        let user = { email:this.state.email, name:this.state.name, password:this.state.password, phone:this.state.phone}
+        axios.post(API_BASE_URL_BACK + "/user/create", user)
+        .then(async res => {
+          console.log("Creando Usuario");
+          await Swal.fire({
+              title: 'Creación de usuario exitosa!',
+              type: 'success',
+              icon: 'success',
+              confirmButtonColor: '#3085d6',
+              text: `Usuario ${this.state.name} creado con éxito`,
+          })
+          this.props.history.push("/signin");
+          window.location.reload();
+        })
+      } else if (this.state.type == "company") {
+        let provider = { email:this.state.email, password:this.state.password, phone:this.state.phone, nameCompany:this.state.nameCompany}
+        axios.post(API_BASE_URL_BACK + "/proveedores/create", provider)
+        .then(async res => {
+          console.log("Creando Proveedor")
+          await Swal.fire({
+              title: 'Creación de proveedor exitosa!',
+              type: 'success',
+              icon: 'success',
+              confirmButtonColor: '#3085d6',
+              text: `Proveedor ${this.state.nameCompany} creado con éxito`,
+          });
+          this.props.history.push("/signin");          
+        })
+      }
     }
-
 
   }
 
@@ -98,7 +128,7 @@ class SignUp extends React.Component {
         <div className="limiter">
         <div className="container-signup">
           <div className="wrap-signup">
-            <form className="signup-form">
+            <form className="signup-form" onSubmit={this.handleSubmit}>
               <span className="signup-form-title">
                 <a href={"./"}>
                   Appet
@@ -119,11 +149,11 @@ class SignUp extends React.Component {
                 <span className="label-input">Mail</span>
               </div>
 
-              <div className="wrap-input">
+              {this.state.type ==='user' && (<div className="wrap-input">
                 <input className="input" name="pass" onChange={this.onChangeUserName} required/>
                 <span className="focus-input"></span>
                 <span className="label-input">Name</span>
-              </div>
+              </div>)}
 
               <div className="wrap-input">
                 <input className="input" type="password" name="pass" onChange={this.onChangePassword} required/>
@@ -143,15 +173,15 @@ class SignUp extends React.Component {
                 <span className="label-input">Phone</span>
               </div>
 
-              <div className="wrap-input">
+              {this.state.type==='company' && (<div className="wrap-input">
                 <input className="input" name="pass" onChange={this.onChangeNameCompany} required/>
                 <span className="focus-input"></span>
                 <span className="label-input">Company or foundation</span>
-              </div>
+              </div>)}
 
               <div className="container-signup-form-btn">
               <a className="vincule" href="#">Info</a>
-                <button className="signup-form-btn" type="submit" onClick={this.handleSubmit}>
+                <button className="signup-form-btn" type="submit">
                   SignUp
                 </button>
               </div>

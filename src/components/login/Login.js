@@ -3,7 +3,7 @@ import './Login.css';
 import {API_BASE_URL_BACK} from '../../constants/index';
 import axios from 'axios';
 import { Redirect } from 'react-router-dom';
-
+import Swal from 'sweetalert2';
 
 class Login extends React.Component {
   constructor(props) {
@@ -25,14 +25,32 @@ class Login extends React.Component {
       this.state.password
     ]
 
-    axios.post(API_BASE_URL_BACK + "/auth/signin", sesion).then(response => {
+    axios.post(API_BASE_URL_BACK + "/auth/signin", sesion).then(async response => {
+
       console.log(response.data)
       localStorage.setItem("localEmail", response.data.email);
       localStorage.setItem("token", response.data.accessToken);
       localStorage.setItem("tokenType", response.data.tokenType);
       localStorage.setItem("isSupplier", response.data.isSupplier);
-      this.props.history.push("/");
-      window.location.reload();
+      await Swal.fire({
+          title: 'Inicio de sesión exitoso!',
+          type: 'success',
+          icon: 'success',
+          confirmButtonColor: '#3085d6',
+          text: `Sesión iniciada con exito ${this.state.username}`,
+      })
+      this.props.history.push("/");      
+
+    }, error =>{
+        Swal.fire({
+            title: 'Inicio de sesión erroneo!',
+            type: 'error',
+            icon: 'error',
+            confirmButtonColor: '#3085d6',
+            text: `Error al iniciar sesión: ${this.state.username} usuario o contraseña incorrecta`,
+        })
+        document.getElementById("username").value = "";
+        document.getElementById("password").value = "";
     })
   }
 
@@ -62,14 +80,14 @@ class Login extends React.Component {
 
 
   					<div className="wrap-input">
-  						<input className="input" onChange={this.onChangeUsername} name="username" required/>
+  						<input id="username" className="input" onChange={this.onChangeUsername} name="username" required/>
   						<span className="focus-input"></span>
   						<span className="label-input">Username</span>
   					</div>
 
 
   					<div className="wrap-input">
-  						<input className="input" type="password" onChange={this.onChangePassword} name="pass" required/>
+  						<input id="password" className="input" type="password" onChange={this.onChangePassword} name="pass" required/>
   						<span className="focus-input"></span>
   						<span className="label-input">Password</span>
   					</div>

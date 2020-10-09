@@ -8,7 +8,8 @@ export default class Dogs extends React.Component {
     constructor(props){
       super(props);
       let isUser;
-      
+      let isSupplier;
+
     }
 
 
@@ -16,6 +17,8 @@ export default class Dogs extends React.Component {
 
         if(localStorage.getItem("isSupplier") === "false"){
           this.isUser = true;
+        }else if(localStorage.getItem("isSupplier") === true){
+          this.isSupplier = true;
         }
         return (
             <React.Fragment>
@@ -27,9 +30,15 @@ export default class Dogs extends React.Component {
                     <br/>
 
                     <div className="botonStyle" >
-                        <a href="/addpet">
-                            {this.isUser && (<button id="color" className={"btn btn-outline btn-light btn-block "}>Interested in giving in adoption</button>)}
-                        </a>
+
+                            {this.isUser && (<a id="color" href="/addpet" className={"btn btn-outline btn-light btn-block "}>Interested in giving in adoption</a>)}
+
+
+                            {!this.isUser && !this.isSupplier && (<a id="color" href="/signin" className={"btn btn-outline btn-light btn-block "}>Interested in giving in adoption</a>)}
+                          
+
+
+
                     </div>
                     <br/>
                     <br/>

@@ -44,8 +44,8 @@ export default class DogProfile extends React.Component {
                         </div>
                     </div>
                     <div className="botonStyle2">
-                        {this.isUser && (<a href="/donation" id="color" className="btn btn float-left mr-2">Donate to foundation</a>)}
-                    {this.isUser && (<Dashboard/>)}
+                        <a href="/donation" id="color" className="btn btn float-left mr-2">Donate to foundation</a>
+                    <Dashboard/>
                     </div>
                 </div>
 

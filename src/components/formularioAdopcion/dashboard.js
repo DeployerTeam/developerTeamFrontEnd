@@ -6,7 +6,11 @@ import Formulary from './formulary.js'
 
 export default class Dashboard extends Component {
 
-
+  constructor(props){
+    super(props);
+    let isUser;
+    let isSupplier;
+  }
   state = { show: false };
 
   showModal = () => {
@@ -21,15 +25,26 @@ export default class Dashboard extends Component {
 
 
   render() {
+    if(localStorage.getItem("isSupplier") === "false"){
+      this.isUser = true;
+    }else if(localStorage.getItem("isSupplier") === "true"){
+      this.isSupplier = true;
+    }
     return (
       <main>
         <ModalFormulary show={this.state.show} handleClose={this.hideModal}>
           <p>Modal</p>
           <p>Data</p>
         </ModalFormulary>
-        <Button variant="primary" onClick={this.showModal}>
+        {this.isUser && (<Button variant="primary" onClick={this.showModal}>
           Adopt
-        </Button>
+        </Button>)}
+
+        {!this.isUser && !this.isSupplier && (<Button variant="primary" href="/signin">
+          Adopt
+        </Button>)}
+
+
       </main>
     );
   }
