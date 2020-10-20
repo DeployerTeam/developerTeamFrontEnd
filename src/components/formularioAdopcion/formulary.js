@@ -7,7 +7,6 @@ import Swal from 'sweetalert2';
 export default class Formulary extends Component {
     constructor(props){
         super(props);
-
         this.state = {
             idPet: window.location.pathname.split("/")[2],
             name : '',
@@ -25,7 +24,8 @@ export default class Formulary extends Component {
             allergic: '',
             space: '',
             pets: '',
-            financially: ''
+            financially: '',
+            photo: props.pet.image
         }
         console.log(this.state.idPet);
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -49,6 +49,7 @@ export default class Formulary extends Component {
     }
 
     handleSubmit(event){
+      console.log(this.state.photo)
         event.preventDefault();
         console.log(this.state.idPet + " Este es el id del perrito")
 
@@ -69,7 +70,9 @@ export default class Formulary extends Component {
             allergic: this.state.allergic,
             space: this.state.space,
             pets: this.state.pets,
-            financially: this.state.financially
+            financially: this.state.financially,
+            photo: this.state.photo
+
         }
 
         axios.post(API_BASE_URL_BACK + "/user/addform", adoptForm)

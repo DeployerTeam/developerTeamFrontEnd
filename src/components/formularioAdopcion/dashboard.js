@@ -32,7 +32,7 @@ export default class Dashboard extends Component {
     }
     return (
       <main>
-        <ModalFormulary show={this.state.show} handleClose={this.hideModal}>
+        <ModalFormulary pet={this.props.pet} show={this.state.show} handleClose={this.hideModal}>
           <p>Modal</p>
           <p>Data</p>
         </ModalFormulary>
@@ -50,7 +50,7 @@ export default class Dashboard extends Component {
   }
 }
 
-const ModalFormulary = ({ handleClose, show, children }) => {
+const ModalFormulary = ({ handleClose, show, children,pet }) => {
     const showHideClassName = show ? "modal display-block" : "modal display-none";
 
     return (
@@ -60,7 +60,7 @@ const ModalFormulary = ({ handleClose, show, children }) => {
                 <Modal.Title>Formulario de adopción</Modal.Title>
             </Modal.Header>
             <Modal.Body>
-                <Formulary />
+                <Formulary pet= {pet} />
             </Modal.Body>
             <Modal.Footer>
                 <Button variant="secondary" onClick={handleClose}>

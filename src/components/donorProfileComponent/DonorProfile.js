@@ -45,7 +45,7 @@ export default class DonorProfile extends Component{
     componentDidMount(){
         this.getForms();
       }
-    
+
     getForms(){
         let formsOfAdopt = axios.get(API_BASE_URL_BACK + '/user/getforms?id=' + localStorage.getItem("localEmail"))
         .then( formsOfAdopt => {
@@ -86,7 +86,9 @@ export default class DonorProfile extends Component{
 
                 {this.state.forms.map((form, value) => {
                 const labelId = `checkbox-list-secondary-label-${value}`;
+
                 return (
+
                         <ListItem key={value} className="donor">
                             <div>
                                 <Dialog
@@ -112,12 +114,12 @@ export default class DonorProfile extends Component{
 
                                     <DialogContent>
                                         <AdoptionRequest dataform={form}/>  {/* Una vez se utilice el back se usara el id de la solicitud para extraer los datos */}
-                                        <Button autoFocus onClick={this.handleClickClose} color="primary">
+                                        <Button autoFocus onClick={this.handleClickClose}>
                                             Check as read
-                                        </Button>                                      
+                                        </Button>
                                     </DialogContent>
-                                    
-                                
+
+
 
                                 </Dialog>
                             </div>

@@ -2,7 +2,7 @@ import React from 'react';
 import Header from '../headerComponent/header';
 import './main.css';
 import Footer from '../footerComponent/Footer';
-import Dashboard from '../formularioPreferencias/dashboard';
+
 
 export default class Main extends React.Component{
 
@@ -15,17 +15,14 @@ export default class Main extends React.Component{
 
 
     render(){
-        
+
         return (
             <React.Fragment>
                 <div className="container main">
                     <div className="row">
                         <Header/>
                     </div>
-
-                    <div className="preferencias">
-                        <Dashboard/>
-                    </div>
+                  
 
                     <div className="row body">
                         <a className="col-12 col-md-4 sect ml-2 mr-5" href="/adoption"><div >
