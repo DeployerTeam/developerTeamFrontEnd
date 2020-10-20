@@ -3,7 +3,7 @@ import './modal.css';
 import Modal from 'react-bootstrap/Modal'
 import Button from 'react-bootstrap/Button'
 import Formulary from './formulary.js'
-
+import Dropdown from 'react-bootstrap/Dropdown'
 export default class Dashboard extends Component {
 
   constructor(props){
@@ -38,13 +38,11 @@ export default class Dashboard extends Component {
           <p>Data</p>
         </ModalFormulary>
 
-        {this.isUser && (<Button variant="primary" onClick={this.showModal}>
-          Preferencias
-        </Button>)}
+        {this.isUser && (
+          <Dropdown.Item onClick={this.showModal}>Preferencias</Dropdown.Item>
+        )}
 
-        {!this.isUser && !this.isSupplier && (<Button variant="primary" href="/signin">
-          Preferencias
-        </Button>)}
+        {!this.isUser && !this.isSupplier && (<Dropdown.Item href="/signin">Preferencias</Dropdown.Item>)}
 
       </main>
     );

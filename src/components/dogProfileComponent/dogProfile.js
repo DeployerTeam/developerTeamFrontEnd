@@ -12,8 +12,7 @@ export default class DogProfile extends React.Component {
     let isUser;
     this.state = {
       pet: this.props.location.state.pets
-    }
-    console.log(this.state.pet.id)
+    }    
   }
 
     render() {
@@ -45,7 +44,7 @@ export default class DogProfile extends React.Component {
                     </div>
                     <div className="botonStyle2">
                         <a href="/donation" id="color" className="btn btn float-left mr-2">Donar a fundación</a>
-                    <Dashboard/>
+                    <Dashboard pet={this.state.pet}/>
                     </div>
                 </div>
 
