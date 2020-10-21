@@ -113,9 +113,9 @@ export default class DonorProfile extends Component{
 
 
                                     <DialogContent>
-                                        <AdoptionRequest dataform={form}/>  {/* Una vez se utilice el back se usara el id de la solicitud para extraer los datos */}
+                                        <AdoptionRequest dataform={form}/> 
                                         <Button autoFocus onClick={this.handleClickClose}>
-                                            Check as read
+                                            Cerrar
                                         </Button>
                                     </DialogContent>
 
