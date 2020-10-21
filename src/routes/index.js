@@ -12,6 +12,7 @@ import AllianceClientPage from '../components/alliancesComponent/AllianceClientP
 import DonorProfile from '../components/donorProfileComponent/DonorProfile';
 import Pagos from '../components/pagos/pagos';
 import AddPet from '../components/addPetComponent/AddPet';
+import Notification from '../components/notificationComponent/Notification';
 
 
 
@@ -28,6 +29,7 @@ export default () => (
             <Route path="/donorprofile" exact component={DonorProfile}/>
             <Route path="/donation" exact component = {Pagos} />
             <Route path="/addpet" exact component = {AddPet} />
+            <Route path="/notifications" exact component = {Notification} />
         </Switch>
 
     </Router>

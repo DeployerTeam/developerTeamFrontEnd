@@ -1,8 +1,9 @@
 import React, {Component} from 'react';
 
-import Paper from '@material-ui/core/Paper';
-import Grid from '@material-ui/core/Grid';
 import CardMedia from '@material-ui/core/CardMedia';
+import Button from 'react-bootstrap/Button'
+import {API_BASE_URL_BACK} from '../../constants/index';
+import axios from 'axios';
 
 
 export class AdoptionRequest extends Component{
@@ -11,6 +12,26 @@ export class AdoptionRequest extends Component{
         this.state = {
             form: this.props.dataform
         }
+        this.approveRequest = this.approveRequest.bind(this);
+        this.denyRequest = this.denyRequest.bind(this);
+    }
+
+    approveRequest(event){
+        event.preventDefault();
+        console.log(this.state.form);
+        let generate = {
+                "id": 0,
+                "code": "",
+                "redeemed": false,
+                "ownerEmail": this.state.form.email
+            }
+
+        axios.post(API_BASE_URL_BACK + "/bono/generate", generate);
+    }
+
+    denyRequest(event){
+        event.preventDefault();
+
     }
 
     render(){
@@ -27,6 +48,15 @@ export class AdoptionRequest extends Component{
                 <p><h3>Telefono: </h3>{this.state.form.phone}</p>
                 <p><h3>Email: </h3>{this.state.form.email}</p>
                 <p><h3>Ciudad: </h3>{this.state.form.city}</p>
+                <div>    
+                    <Button type="button" onClick={this.approveRequest} variant="primary">
+                        Aprobar Solicitud
+                    </Button>
+                    <Button type="button"  variant="primary">
+                        Denegar Solicitud
+                    </Button>               
+                </div>
+
 
             </div>
             </form>

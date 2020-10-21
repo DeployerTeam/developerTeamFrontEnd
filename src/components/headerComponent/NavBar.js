@@ -40,7 +40,7 @@ export default function PrimarySearchAppBar(props) {
 
               <Dropdown.Menu>
                 <Dropdown.Item href="/donorprofile">Inbox</Dropdown.Item>
-                {isUser && (<Dropdown.Item href="#">Notificaciones</Dropdown.Item>)}
+                {isUser && (<Dropdown.Item href="/notifications">Notificaciones</Dropdown.Item>)}
                 <DashboardProperties/>
               </Dropdown.Menu>
             </Dropdown>
