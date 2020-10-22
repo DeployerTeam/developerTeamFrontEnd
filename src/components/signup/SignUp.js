@@ -19,7 +19,7 @@ class SignUp extends React.Component {
       password:'',
       confirmPassword:'',
       phone: '',
-      nameCompany:'',
+      companyName:'',
       userName: '',
 
     }
@@ -62,7 +62,7 @@ class SignUp extends React.Component {
           window.location.reload();
         })
       } else if (this.state.type == "company") {
-        let provider = { email:this.state.email, password:this.state.password, phone:this.state.phone, nameCompany:this.state.nameCompany}
+        let provider = { email:this.state.email, password:this.state.password, phone:this.state.phone, companyName:this.state.companyName}
         axios.post(API_BASE_URL_BACK + "/proveedores/create", provider)
         .then(async res => {
           console.log("Creando Proveedor")
@@ -71,7 +71,7 @@ class SignUp extends React.Component {
               type: 'success',
               icon: 'success',
               confirmButtonColor: '#3085d6',
-              text: `Proveedor ${this.state.nameCompany} creado con éxito`,
+              text: `Proveedor ${this.state.companyName} creado con éxito`,
           });
           this.props.history.push("/signin");          
         })
@@ -106,7 +106,7 @@ class SignUp extends React.Component {
 
   onChangeNameCompany(event){
     this.setState({
-      nameCompany: event.target.value
+      companyName: event.target.value
     });
   }
 

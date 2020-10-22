@@ -26,7 +26,7 @@ export default class Dashboard extends Component {
           <p>Modal</p>
           <p>Data</p>
         </ModalFormulary>
-        <Nav.Link onClick={this.showModal}>Profile</Nav.Link>
+        <Nav.Link onClick={this.showModal}>Perfil</Nav.Link>
       </main>
     );
   }
