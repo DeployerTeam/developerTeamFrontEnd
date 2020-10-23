@@ -1,15 +1,15 @@
 import React, { Component } from "react";
 import './modal.css';
 import Modal from 'react-bootstrap/Modal'
-import Button from 'react-bootstrap/Button'
 import AllyProfile from "./AllyProfile";
 import Nav from 'react-bootstrap/Nav';
 
 export default class AllyDashboard extends Component {
-  state = { show: false };
+  
+  state = { show : false };
 
   showModal = () => {
-    this.setState({ show: true });
+    this.setState({ show : true });
   };
 
   hideModal = () => {
@@ -23,7 +23,7 @@ export default class AllyDashboard extends Component {
           <p>Modal</p>
           <p>Data</p>
         </ModalFormulary>
-        <Nav.Link onClick={this.showModal}>Perfil de Aliado</Nav.Link>
+        <Nav.Link onClick={this.showModal}>Perfil</Nav.Link>
       </main>
     );
   }
@@ -36,19 +36,11 @@ const ModalFormulary = ({ handleClose, show, children }) => {
       <div className={showHideClassName}>
         <Modal size="lg" show={show} onHide={handleClose}>
             <Modal.Header closeButton>
-                <Modal.Title>Formulario de Alianza</Modal.Title>
+                <Modal.Title>Perfil</Modal.Title>
             </Modal.Header>
             <Modal.Body>
-                <AllyProfile/>
+                <AllyProfile />
             </Modal.Body>
-            <Modal.Footer>
-                <Button variant="secondary" onClick={handleClose}>
-                    Cerrar
-                </Button>
-                <Button variant="primary" onClick={handleClose}>
-                    Guardar cambios
-                </Button>
-            </Modal.Footer>
         </Modal>
       </div>
     );

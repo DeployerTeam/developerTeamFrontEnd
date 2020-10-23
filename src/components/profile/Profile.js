@@ -1,10 +1,30 @@
 
 import React, { Component } from "react";
 import Form from 'react-bootstrap/Form'
-
-
+import { API_BASE_URL_BACK } from "../../constants/index";
+import axios from 'axios';
 
 export default class Profile extends Component {
+
+  constructor(props){
+    super(props);
+    this.state = {
+      user : {}
+    }
+    this.obtenerUsuario = this.obtenerUsuario.bind(this);
+  }
+
+  componentDidMount(){
+    this.obtenerUsuario();
+  }
+
+  obtenerUsuario() {
+    let getUser = axios.get(API_BASE_URL_BACK + '/user/' + localStorage.getItem("localEmail"))
+    .then( getUser => {
+      this.setState({user : getUser.data})
+      console.log(this.state.user);
+    })
+  }
 
   render(){
       return(
