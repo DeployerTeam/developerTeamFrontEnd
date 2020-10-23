@@ -4,7 +4,8 @@ import Form from 'react-bootstrap/Form'
 import { API_BASE_URL_BACK } from "../../constants/index";
 import axios from 'axios';
 import Swal from 'sweetalert2';
-import Button from 'react-bootstrap/Button'
+import Button from 'react-bootstrap/Button';
+import './allyProfile.css';
 
 export default class AllyProfile extends Component {
 
@@ -173,12 +174,15 @@ export default class AllyProfile extends Component {
                   <input type="text" id="address" name="address" value={this.state.address} onChange={this.onChangeAddress} />
                 </div>
               </div>    
-              <Button variant="secondary" onClick={this.reload}>
-                  Cerrar
-              </Button>
-              <Button variant="primary" type="submit" onClick={this.actualizarProveedor}>
-                  Guardar cambios
-              </Button>                
+              <div class="float-right style-div-buttons">
+                <Button variant="secondary" onClick={this.reload}>
+                    Cerrar
+                </Button>
+                <Button variant="primary" type="submit" onClick={this.actualizarProveedor}>
+                    Guardar cambios
+                </Button>  
+              </div>
+                            
             </form>
           </div>
         </div>

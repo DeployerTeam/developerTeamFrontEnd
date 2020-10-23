@@ -1,12 +1,8 @@
 import React, { Component } from "react";
 import './modal.css';
 import Modal from 'react-bootstrap/Modal'
-import Button from 'react-bootstrap/Button'
 import AllyProfile from "./AllyProfile";
 import Nav from 'react-bootstrap/Nav';
-import { API_BASE_URL_BACK } from "../../constants/index";
-import axios from 'axios';
-import Swal from 'sweetalert2';
 
 export default class AllyDashboard extends Component {
   
