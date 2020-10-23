@@ -4,12 +4,16 @@ import Modal from 'react-bootstrap/Modal'
 import Button from 'react-bootstrap/Button'
 import AllyProfile from "./AllyProfile";
 import Nav from 'react-bootstrap/Nav';
+import { API_BASE_URL_BACK } from "../../constants/index";
+import axios from 'axios';
+import Swal from 'sweetalert2';
 
 export default class AllyDashboard extends Component {
-  state = { show: false };
+  
+  state = { show : false };
 
   showModal = () => {
-    this.setState({ show: true });
+    this.setState({ show : true });
   };
 
   hideModal = () => {
@@ -39,16 +43,8 @@ const ModalFormulary = ({ handleClose, show, children }) => {
                 <Modal.Title>Perfil</Modal.Title>
             </Modal.Header>
             <Modal.Body>
-                <AllyProfile/>
+                <AllyProfile />
             </Modal.Body>
-            <Modal.Footer>
-                <Button variant="secondary" onClick={handleClose}>
-                    Cerrar
-                </Button>
-                <Button variant="primary" onClick={handleClose}>
-                    Guardar cambios
-                </Button>
-            </Modal.Footer>
         </Modal>
       </div>
     );
