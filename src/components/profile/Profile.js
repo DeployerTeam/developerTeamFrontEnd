@@ -9,7 +9,13 @@ export default class Profile extends Component {
   constructor(props){
     super(props);
     this.state = {
-      user : {}
+      email : "",
+      age : null,
+      gender : "",
+      phone : null,
+      name : "",
+      city : "",
+      address : ""
     }
     this.obtenerUsuario = this.obtenerUsuario.bind(this);
   }
@@ -21,8 +27,14 @@ export default class Profile extends Component {
   obtenerUsuario() {
     let getUser = axios.get(API_BASE_URL_BACK + '/user/' + localStorage.getItem("localEmail"))
     .then( getUser => {
-      this.setState({user : getUser.data})
-      console.log(this.state.user);
+      this.setState({email : getUser.data.email, 
+        age : getUser.data.age, 
+        gender : getUser.data.gender, 
+        phone : getUser.data.phone, 
+        name : getUser.data.name, 
+        city : getUser.data.city,
+        address : getUser.data.address})
+      console.log(this.state.name);
     })
   }
 
@@ -51,7 +63,7 @@ export default class Profile extends Component {
                   <label for="fname">Nombre</label>
                 </div>
                 <div className="col-75">
-                  <input type="text" id="fname" name="firstname" placeholder="Complete Name.."/>
+                  <input type="text" id="fname" name="firstname" value={this.state.name}/>
                 </div>
               </div>
               <div className="row">
@@ -59,7 +71,7 @@ export default class Profile extends Component {
                   <label for="age">Edad</label>
                 </div>
                 <div className="col-75">
-                  <input type="text" id="age" name="age" placeholder="Age.."/>
+                  <input type="text" id="age" name="age" value={this.state.age}/>
                 </div>
               </div>
               <div className="row">
@@ -68,7 +80,7 @@ export default class Profile extends Component {
                 </div>
                 <div className="col-75">
                   <select id="gender" name="gender">
-                    <option value="" selected disabled hidden>Seleccione</option>
+                    <option value={this.state.gender} selected disabled hidden>Seleccione</option>
                     <option value="australia">Masculino</option>
                     <option value="canada">Femenino</option>
                     <option value="usa">Otro</option>
@@ -77,10 +89,10 @@ export default class Profile extends Component {
               </div>                        
               <div className="row">
                 <div className="col-25">
-                  <label for="pNumber">Numero telefonico</label>
+                  <label for="pNumber">Número telefónico</label>
                 </div>
                 <div className="col-75">
-                  <input type="text" id="pNumber" name="pNumber" placeholder="Phone Number.."/>
+                  <input type="text" id="pNumber" name="pNumber" value={this.state.phone}/>
                 </div>
               </div>                        
               <div className="row">
@@ -88,7 +100,7 @@ export default class Profile extends Component {
                   <label for="email">E-mail</label>
                 </div>
                 <div className="col-75">
-                  <input type="text" id="email" name="email" placeholder="E-mail Address.."/>
+                  <input type="text" id="email" name="email" value={this.state.email}/>
                 </div>
               </div>                        
               <div className="row">
@@ -96,7 +108,7 @@ export default class Profile extends Component {
                   <label for="city">Ciudad</label>
                 </div>
                 <div className="col-75">
-                  <input type="text" id="city" name="city" placeholder="City.."/>
+                  <input type="text" id="city" name="city" value={this.state.city}/>
                 </div>
               </div>
               <div className="row">
@@ -104,7 +116,7 @@ export default class Profile extends Component {
                   <label for="address">Dirección</label>
                 </div>
                 <div className="col-75">
-                  <input type="text" id="address" name="address" placeholder="Address.."/>
+                  <input type="text" id="address" name="address" value={this.state.address}/>
                 </div>
               </div>                    
             </form>
