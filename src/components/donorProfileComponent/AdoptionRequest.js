@@ -8,7 +8,7 @@ import axios from 'axios';
 
 export class AdoptionRequest extends Component{
     constructor(props){
-        super(props);        
+        super(props);
         this.state = {
             form: this.props.dataform
         }
@@ -27,11 +27,12 @@ export class AdoptionRequest extends Component{
             }
 
         axios.post(API_BASE_URL_BACK + "/bono/generate", generate);
+        axios.delete(`${API_BASE_URL_BACK}/pet/delete?petId=${this.state.form.idPet}&email=${this.state.form.email}`);
     }
 
     denyRequest(event){
-        event.preventDefault();
-
+        axios.post(API_BASE_URL_BACK+ `/user/deleterequest?email=${this.state.form.email}&petId=${this.state.form.idPet}`);
+        window.location.reload();
     }
 
     render(){
@@ -48,13 +49,13 @@ export class AdoptionRequest extends Component{
                 <p><h3>Telefono: </h3>{this.state.form.phone}</p>
                 <p><h3>Email: </h3>{this.state.form.email}</p>
                 <p><h3>Ciudad: </h3>{this.state.form.city}</p>
-                <div>    
+                <div>
                     <Button type="button" onClick={this.approveRequest} variant="primary">
                         Aprobar Solicitud
                     </Button>
-                    <Button type="button"  variant="primary">
+                    <Button type="button"  onClick={this.denyRequest} variant="primary">
                         Denegar Solicitud
-                    </Button>               
+                    </Button>
                 </div>
 
 
