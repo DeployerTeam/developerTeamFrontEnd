@@ -113,7 +113,7 @@ export default class DonorProfile extends Component{
 
 
                                     <DialogContent>
-                                        <AdoptionRequest dataform={form}/> 
+                                        <AdoptionRequest dataform={form} close={this.handleClickClose}/> 
                                         <Button autoFocus onClick={this.handleClickClose}>
                                             Cerrar
                                         </Button>
