@@ -1,18 +1,62 @@
 import React from 'react';
 
+import Swal from 'sweetalert2';
 import Header from '../headerComponent/header';
 import Map from './AllianceMap';
 import './AllianceClientPage.css';
 import Carousel from 'react-bootstrap/Carousel'
+import Button from 'react-bootstrap/Button'
+import axios from 'axios';
+import {API_BASE_URL_BACK} from '../../constants/index';
 
 export default class AllianceClientPage extends React.Component {
 
   constructor(props){
     super(props);
     this.state = {
-      ally: this.props.location.state.alliances
+      ally: this.props.location.state.alliances,
+      code: ''
     }    
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.onChangeCode = this.onChangeCode.bind(this);
   }
+
+  handleSubmit(event){
+    event.preventDefault();
+    let bono = [localStorage.getItem("localEmail"),
+                this.state.code];
+    console.log(bono);
+    axios.post(API_BASE_URL_BACK + "/bono/redeem", bono)
+    .then(async res => {
+      console.log(res.data);
+      if(res.data == true){
+          await Swal.fire({
+            title: 'Solicitud exitosa!',
+            type: 'success',
+            icon: 'success',
+            confirmButtonColor: '#3085d6',
+            text: `Bono Redimido`,
+        })
+      } else {
+        Swal.fire({
+          title: 'Bono no valido!',
+          type: 'error',
+          icon: 'error',
+          confirmButtonColor: '#3085d6',
+          text: `El bono ya ha sido canjeado o no existe`,
+        })
+      }
+
+
+    });
+
+  }
+
+  onChangeCode(event){
+    this.setState({
+      code: event.target.value
+    });
+}
 
     render() {
         return(
@@ -27,6 +71,23 @@ export default class AllianceClientPage extends React.Component {
                     <div className="allianceName">
                       <h1><dt>{this.state.ally.name}</dt></h1>
                     </div>
+
+                    <form onSubmit={this.handleSubmit}>
+                        <div className="row">
+                            <div >
+                                <label for="fname">Redimir Bono</label>
+                            </div>
+                            <div className="col-25">
+                                <input onChange={this.onChangeCode} type="text" name="firstname" placeholder="Codigo" required/>
+                            </div>
+                            <Button type="submit" variant="primary">
+                                Canjear
+                            </Button>
+                        </div>
+
+
+                    </form>
+
                     <div className="row body cont">
                         
                         <div className="map col-12 col-md-6">

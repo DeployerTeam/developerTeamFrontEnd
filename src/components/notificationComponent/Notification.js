@@ -20,7 +20,7 @@ export default class Notification extends React.Component {
   }
 
   getNotifications(){
-    let bonos = axios.get(API_BASE_URL_BACK + '/bono/getmybonos?user=' + localStorage.getItem("localEmail"))
+    let bonos = axios.get(API_BASE_URL_BACK + '/bono/mybonos?user=' + localStorage.getItem("localEmail"))
     .then( bonos => {
       this.setState({notifications : bonos.data})
       console.log(this.state.notifications);
