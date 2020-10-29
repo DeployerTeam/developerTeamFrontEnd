@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom';
 
 export default class Alliance extends React.Component {
     constructor(props){
@@ -13,10 +13,10 @@ export default class Alliance extends React.Component {
                     <div className="card-header"> {this.props.name} </div>
                     <img className="card-img-top rounded-0" src="https://www.bls.gov/opub/btn/volume-8/images/veterinary-occupations.jpg" alt="Card image cap"/>
                     <div className="card-body">
-                        <h5 className="card-title"> {"$ " + this.props.price} </h5>
-                        <div className="card-text"> {this.props.description} </div>
+                        <div className="card-text"> {this.props.city} </div>
                         <br/>
-                        <a href="/allianceprofile" className="btn btn-primary">Ver perfil</a>
+                        <Link className="btn btn-primary" to={{ pathname: "/allianceprofile/" + this.props.id,
+                              state: {alliances: this.props}}}>Ver perfil</Link>
                     </div>
                 </div>
             <br/>

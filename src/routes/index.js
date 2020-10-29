@@ -25,7 +25,7 @@ export default () => (
             <Route path="/adoption" exact component={Dogs} />
             <Route path="/dogprofile/:id" exact component={DogProfile}/>
             <Route path="/alliances" exact component={AllianceDashboard}/>
-            <Route path="/allianceprofile" exact component={AllianceClientPage}/>
+            <Route path="/allianceprofile/:id" exact component={AllianceClientPage}/>
             <Route path="/donorprofile" exact component={DonorProfile}/>
             <Route path="/donation" exact component = {Pagos} />
             <Route path="/addpet" exact component = {AddPet} />
