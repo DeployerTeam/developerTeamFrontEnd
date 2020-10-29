@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 export default class Alliance extends React.Component {
     constructor(props){
         super(props);
+        console.log(this.props);
       }
 
       render(){
@@ -15,7 +16,7 @@ export default class Alliance extends React.Component {
                     <div className="card-body">
                         <div className="card-text"> {this.props.city} </div>
                         <br/>
-                        <Link className="btn btn-primary" to={{ pathname: "/allianceprofile/" + this.props.id,
+                        <Link className="btn btn-primary" to={{ pathname: "/allianceprofile/" + this.props.name,
                               state: {alliances: this.props}}}>Ver perfil</Link>
                     </div>
                 </div>
