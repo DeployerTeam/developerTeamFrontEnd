@@ -16,7 +16,7 @@ export default class ClassName extends React.Component {
               <div className="card-body">
                   <br/>
 
-                  <Link className="btn btn-primary" to={{ pathname: "/dogProfile/" + this.props.id,
+                  <Link className="btn btn-primary" to={{ pathname: "/dogProfile/" + this.props.email,
                               state: {pets: this.props}}}>Ver perfil</Link>
               </div>
           </div>

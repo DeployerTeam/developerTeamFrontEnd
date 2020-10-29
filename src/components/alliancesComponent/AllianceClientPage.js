@@ -9,6 +9,9 @@ export default class AllianceClientPage extends React.Component {
 
   constructor(props){
     super(props);
+    this.state = {
+      ally: this.props.location.state.alliances
+    }    
   }
 
     render() {
@@ -19,10 +22,10 @@ export default class AllianceClientPage extends React.Component {
                       <Header />
                     </div>
                     <div className="back">
-                      <a href="/alliances" className="btn btn-primary">Atras</a>
+                      <a href="/alliances" className="btn btn-primary">Atrás</a>
                     </div>
                     <div className="allianceName">
-                      <h1><dt>VetStore</dt></h1>
+                      <h1><dt>{this.state.ally.name}</dt></h1>
                     </div>
                     <div className="row body cont">
                         
@@ -46,10 +49,10 @@ export default class AllianceClientPage extends React.Component {
                         
                     </div>
                     <div className="info" style={{color: "#fff"}}>
-                            <h4 className="font-weight-light font">Dirección: Cll 170</h4>
+                            <h4 className="font-weight-light font">Dirección: {this.state.ally.address}, {this.state.ally.city}</h4>
                             <h4 className="font-weight-light">Servicio: Market</h4>
-                            <h4 className="font-weight-light">Telefono: +57 111 1111111</h4>
-                            <h4 className="font-weight-light">E-mail: vetstore@vetsrore.com</h4>
+                            <h4 className="font-weight-light">Teléfono: {this.state.ally.phone}</h4>
+                            <h4 className="font-weight-light">Correo: {this.state.ally.email}</h4>
                     </div>
                 </div>
 
