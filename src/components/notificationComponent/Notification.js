@@ -35,7 +35,7 @@ export default class Notification extends React.Component {
                 <h1>Mis Bonos</h1>
                 <List>
                     {this.state.notifications.map((bono) => {
-                        
+
                         return(
                             <ListItem>
                                 <ListItemText >

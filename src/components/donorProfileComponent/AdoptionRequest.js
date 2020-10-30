@@ -4,11 +4,11 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Button from 'react-bootstrap/Button'
 import {API_BASE_URL_BACK} from '../../constants/index';
 import axios from 'axios';
-
+import Swal from 'sweetalert2';
 
 export class AdoptionRequest extends Component{
     constructor(props){
-        super(props);        
+        super(props);
         this.state = {
             form: this.props.dataform
         }
@@ -18,7 +18,6 @@ export class AdoptionRequest extends Component{
 
     approveRequest(event){
         event.preventDefault();
-        console.log(this.state.form);
         let generate = {
                 "id": 0,
                 "code": "",
@@ -26,11 +25,33 @@ export class AdoptionRequest extends Component{
                 "ownerEmail": this.state.form.email
             }
 
-        axios.post(API_BASE_URL_BACK + "/bono/generate", generate);
+        axios.post(API_BASE_URL_BACK + "/bono/generate", generate).then(() => {
+            axios.delete(`${API_BASE_URL_BACK}/pet/delete?petId=${this.state.form.idPet}&email=${this.state.form.email}`).then(() => {
+              this.props.close();
+              Swal.fire({
+                  title: '¡Solicitud de adopción aceptada!',
+                  type: 'success',
+                  icon: 'success',
+                  confirmButtonColor: '#3085d6',
+                  text: ` Usuario ${this.state.form.email} aprobado para adoptar `,
+              }).then(() => window.location.reload())
+
+            });
+        })
+
     }
 
-    denyRequest(event){
-        event.preventDefault();
+  denyRequest(event){
+        axios.post(API_BASE_URL_BACK+ `/user/deleterequest?email=${this.state.form.email}&petId=${this.state.form.idPet}`).then(() =>{
+          this.props.close();
+          Swal.fire({
+              title: '¡Solicitud de adopción rechazada!',
+              type: 'error',
+              icon: 'error',
+              confirmButtonColor: '#3085d6',
+              text: `Usuario ${this.state.form.email} no aprobado para adoptar`,
+          }).then(() => window.location.reload())
+        });
 
     }
 
@@ -48,13 +69,13 @@ export class AdoptionRequest extends Component{
                 <p><h3>Telefono: </h3>{this.state.form.phone}</p>
                 <p><h3>Email: </h3>{this.state.form.email}</p>
                 <p><h3>Ciudad: </h3>{this.state.form.city}</p>
-                <div>    
+                <div>
                     <Button type="button" onClick={this.approveRequest} variant="primary">
                         Aprobar Solicitud
                     </Button>
-                    <Button type="button"  variant="primary">
+                    <Button type="button"  onClick={this.denyRequest} variant="primary">
                         Denegar Solicitud
-                    </Button>               
+                    </Button>
                 </div>
 
 
