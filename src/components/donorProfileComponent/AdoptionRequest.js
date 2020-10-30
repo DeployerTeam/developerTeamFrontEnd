@@ -33,7 +33,7 @@ export class AdoptionRequest extends Component{
                   type: 'success',
                   icon: 'success',
                   confirmButtonColor: '#3085d6',
-                  text: `Usuario ${this.state.form.email} aprobado para adoptar`,
+                  text: ` Usuario ${this.state.form.email} aprobado para adoptar `,
               }).then(() => window.location.reload())
 
             });
