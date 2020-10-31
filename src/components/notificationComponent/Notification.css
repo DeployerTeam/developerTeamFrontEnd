@@ -1,8 +1,18 @@
-.root{
-
-    max-width: 400px;
+.container1  {
     padding: 10px;
-    margin-top: 30px;
-    margin-left: 15px;
-    margin-right: auto;
+    margin-top: 5%;
+    margin-left: 20%;
+    margin-right: 20%;
+    background-image: url(https://png.pngtree.com/thumb_back/fw800/back_pic/03/92/12/9057e226f57d435.jpg);
+    border-radius: 2%;
+    font-family: Didact Gothic;
+}
+
+h1{
+  text-align: center;
+  font-family: Didact Gothic;
+}
+
+.boton{
+  margin-left:15%;
 }
