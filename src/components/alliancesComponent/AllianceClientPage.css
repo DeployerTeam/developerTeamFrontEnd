@@ -25,7 +25,7 @@
   max-width: 100vw;
   width: 85%;
   margin-left: 10%;
-  margin-top: 5%;
+  margin-top: 4%;
 }
 
 .map{
@@ -57,5 +57,12 @@
     border-color: steelblue;
 }
 
+.redimir{
+  color: white;
+  margin-left: 20%;
+}
 
-
+.redInput{
+  float:left;
+  width: 50%;  
+}

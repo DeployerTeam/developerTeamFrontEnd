@@ -16,7 +16,7 @@ export default class AllianceClientPage extends React.Component {
     this.state = {
       ally: this.props.location.state.alliances,
       code: ''
-    }    
+    }
     this.handleSubmit = this.handleSubmit.bind(this);
     this.onChangeCode = this.onChangeCode.bind(this);
   }
@@ -74,22 +74,23 @@ export default class AllianceClientPage extends React.Component {
 
                     <form onSubmit={this.handleSubmit}>
                         <div className="row">
-                            <div >
-                                <label for="fname">Redimir Bono</label>
-                            </div>
-                            <div className="col-25">
+
+
+                            <label className="redimir my-2" for="fname">Redimir Bono</label>
+                            <div className="col-25 redInput">
+
                                 <input onChange={this.onChangeCode} type="text" name="firstname" placeholder="Codigo" required/>
                             </div>
-                            <Button type="submit" variant="primary">
+                            <button type="submit" className="btn btn-primary">
                                 Canjear
-                            </Button>
+                            </button>
                         </div>
 
 
                     </form>
 
                     <div className="row body cont">
-                        
+
                         <div className="map col-12 col-md-6">
                           <Map/>
                         </div>
@@ -107,7 +108,7 @@ export default class AllianceClientPage extends React.Component {
                             </Carousel.Item>
                           </Carousel>
                         </div>
-                        
+
                     </div>
                     <div className="info" style={{color: "#fff"}}>
                             <h4 className="font-weight-light font">Dirección: {this.state.ally.address}, {this.state.ally.city}</h4>

@@ -25,18 +25,16 @@ export class AdoptionRequest extends Component{
                 "ownerEmail": this.state.form.email
             }
 
-        axios.post(API_BASE_URL_BACK + "/bono/generate", generate).then(() => {
-            axios.delete(`${API_BASE_URL_BACK}/pet/delete?petId=${this.state.form.idPet}&email=${this.state.form.email}`).then(() => {
-              this.props.close();
-              Swal.fire({
-                  title: '¡Solicitud de adopción aceptada!',
-                  type: 'success',
-                  icon: 'success',
-                  confirmButtonColor: '#3085d6',
-                  text: ` Usuario ${this.state.form.email} aprobado para adoptar `,
-              }).then(() => window.location.reload())
-
-            });
+        axios.post(API_BASE_URL_BACK + "/bono/generate", generate);
+        axios.delete(`${API_BASE_URL_BACK}/pet/delete?petId=${this.state.form.idPet}&email=${this.state.form.email}`).then(() => {
+          this.props.close();
+          Swal.fire({
+              title: '¡Solicitud de adopción aceptada!',
+              type: 'success',
+              icon: 'success',
+              confirmButtonColor: '#3085d6',
+              text: ` Usuario ${this.state.form.email} aprobado para adoptar `,
+          }).then(() => window.location.reload())
         })
 
     }
@@ -56,7 +54,7 @@ export class AdoptionRequest extends Component{
     }
 
     render(){
-        return (
+        return (            
             <form className="container mt-5 bg-white">
             <div>
                 <CardMedia
