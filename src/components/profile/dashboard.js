@@ -44,14 +44,6 @@ const ModalFormulary = ({ handleClose, show, children }) => {
             <Modal.Body>
                 <Profile/>
             </Modal.Body>
-            <Modal.Footer>
-                <Button variant="secondary" onClick={handleClose}>
-                    Cerrar
-                </Button>
-                <Button variant="primary" onClick={handleClose}>
-                    Guardar cambios
-                </Button>
-            </Modal.Footer>
         </Modal>
       </div>
     );
