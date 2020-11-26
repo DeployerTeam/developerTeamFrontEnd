@@ -43,17 +43,20 @@ a:link, a:visited, a:active {
 .sect{
     height: 300px;
     padding: 50px;
-    margin-top: 15%;
+    margin-top: 10%;
     border-style: solid;
     border-radius: 5px;
+    min-width: 45%;
+
 }
 
 .sect1{
   height: 300px;
   padding: 50px;
-  margin-top: 15%;
+  margin-top: 10%;
   border-style: solid;
   border-radius: 5px;
+  min-width: 45%;
 }
 
 .sect:hover{
@@ -112,7 +115,7 @@ a:link, a:visited, a:active {
 
 .body{
   width: 70%;
-  margin-left: 22%;
+  margin-left: 15%;
 
 
 

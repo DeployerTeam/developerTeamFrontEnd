@@ -24,7 +24,7 @@ export default class Main extends React.Component{
                     </div>
 
 
-                    <div className="row body">
+                    <div className="row body cont">
                         <a className="col-12 col-md-4 sect ml-2 mr-5" href="/adoption"><div >
                             <h1>ADOPCIÓN</h1>
                         </div></a>

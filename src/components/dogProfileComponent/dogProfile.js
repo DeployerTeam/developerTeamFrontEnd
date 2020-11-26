@@ -3,7 +3,7 @@ import React from 'react';
 import Header from '../headerComponent/header';
 import './dogProfile.css';
 import Dashboard from '../formularioAdopcion/dashboard';
-
+import {IS_USER} from '../../constants/index';
 
 export default class DogProfile extends React.Component {
 
@@ -12,7 +12,7 @@ export default class DogProfile extends React.Component {
     let isUser;
     this.state = {
       pet: this.props.location.state.pets
-    }    
+    }
   }
 
     render() {

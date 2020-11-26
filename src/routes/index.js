@@ -14,9 +14,20 @@ import Pagos from '../components/pagos/pagos';
 import AddPet from '../components/addPetComponent/AddPet';
 import Notification from '../components/notificationComponent/Notification';
 
+let isUser;
+let isSupplier;
+if(localStorage.getItem("isSupplier") === "false"){
+  isUser = true;
+  isSupplier = false;
+}else if(localStorage.getItem("isSupplier") === "true"){
+  isUser =false;
+  isSupplier = true;
+}
 
+console.log(isUser + " " + isSupplier);
 
 export default () => (
+
     <Router>
         <Switch>
             <Route path="/" exact component={Main} />
@@ -26,10 +37,10 @@ export default () => (
             <Route path="/dogprofile/:id" exact component={DogProfile}/>
             <Route path="/alliances" exact component={AllianceDashboard}/>
             <Route path="/allianceprofile/:id" exact component={AllianceClientPage}/>
-            <Route path="/donorprofile" exact component={DonorProfile}/>
-            <Route path="/donation" exact component = {Pagos} />
-            <Route path="/addpet" exact component = {AddPet} />
-            <Route path="/notifications" exact component = {Notification} />
+            {isUser && <Route path="/donorprofile" exact component={DonorProfile}/>}
+            {isUser && <Route path="/donation" exact component = {Pagos} />}
+            {isUser && <Route path="/addpet" exact component = {AddPet} />}
+            {isUser && <Route path="/notifications" exact component = {Notification} />}
         </Switch>
 
     </Router>
