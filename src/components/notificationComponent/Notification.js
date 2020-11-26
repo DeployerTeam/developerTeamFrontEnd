@@ -29,6 +29,25 @@ export default class Notification extends React.Component {
     })
   }
 
+  copyToClipboard(bono){
+    var aux = document.createElement("input");
+
+  // Asigna el contenido del elemento especificado al valor del campo
+    aux.setAttribute("value", bono.code);
+    document.body.appendChild(aux);
+
+  // Selecciona el contenido del campo
+    aux.select();
+
+  // Copia el texto seleccionado
+    document.execCommand("copy");
+
+  // Elimina el campo de la página
+    document.body.removeChild(aux);
+
+
+  }
+
 
   render(){
     return(
