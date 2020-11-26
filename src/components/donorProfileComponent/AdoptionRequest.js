@@ -54,12 +54,12 @@ export class AdoptionRequest extends Component{
     }
 
     render(){
-        return (            
+        return (
             <form className="container mt-5 bg-white">
             <div>
                 <CardMedia
-                    style={{ height: "500px", weight: "300px" }}
-                    image={this.state.form.photo}
+                    style={{ height: "600px", weight: "300px" }}
+                    image={"https://cnnespanol.cnn.com/wp-content/uploads/2020/07/200703104728-labrador-retriever-stock-super-169.jpg?quality=100&strip=info"}
                 />
                 <p><h3>Nombre: </h3>{this.state.form.name}</p>
                 <p><h3>Edad: </h3>{this.state.form.age}</p>

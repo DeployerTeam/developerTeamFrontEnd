@@ -48,6 +48,25 @@ export default class Formulary extends Component {
 
     }
 
+    componentDidMount(){
+      this.obtenerUsuario();
+    }
+
+
+    obtenerUsuario() {
+      let getUser = axios.get(API_BASE_URL_BACK + '/user/' + localStorage.getItem("localEmail"))
+      .then( getUser => {
+        this.setState({email : getUser.data.email,
+          password : getUser.data.password,
+          age : getUser.data.age,
+          gender : getUser.data.gender,
+          phone : getUser.data.phone,
+          name : getUser.data.name,
+          city : getUser.data.city,
+          address : getUser.data.address})
+      })
+    }
+
     handleSubmit(event){
       console.log(this.state.photo)
         event.preventDefault();
@@ -200,7 +219,7 @@ export default class Formulary extends Component {
                                 <label for="fname">Nombre</label>
                             </div>
                             <div className="col-75">
-                                <input onChange={this.onChangeName} type="text" id="fname" name="firstname" placeholder="Complete Name.." required/>
+                                <input onChange={this.onChangeName} type="text" value={this.state.name} id="fname" name="firstname" placeholder="Complete Name.." required/>
                             </div>
                         </div>
                         <div className="row">
@@ -208,7 +227,7 @@ export default class Formulary extends Component {
                                 <label for="age">Edad</label>
                             </div>
                             <div className="col-75">
-                                <input onChange={this.onChangeAge} type="text" id="age" name="age" placeholder="Age.." required/>
+                                <input onChange={this.onChangeAge} type="text" id="age" name="age" value={this.state.age} placeholder="Age.." required/>
                             </div>
                         </div>
                         <div className="row">
@@ -216,7 +235,7 @@ export default class Formulary extends Component {
                                 <label for="gender">Genero</label>
                             </div>
                             <div className="col-75">
-                                <select value={this.state.gender} onChange={this.onChangeGender} id="gender" name="gender" required>
+                                <select value={this.state.gender} onChange={this.onChangeGender} value={this.state.gender} id="gender" name="gender" required>
                                     <option value="" selected disabled hidden>Seleccione</option>
                                     <option value="male">Masculino</option>
                                     <option value="female">Femenino</option>
@@ -229,7 +248,7 @@ export default class Formulary extends Component {
                                 <label for="pNumber">Numero telefonico</label>
                             </div>
                             <div className="col-75">
-                                <input onChange={this.onChangePhone} type="text" id="pNumber" name="pNumber" placeholder="Phone Number.." required/>
+                                <input onChange={this.onChangePhone} value={this.state.phone} type="text" id="pNumber" name="pNumber" placeholder="Phone Number.." required/>
                             </div>
                         </div>
                         <div className="row">
@@ -237,7 +256,7 @@ export default class Formulary extends Component {
                                 <label for="email">E-mail</label>
                             </div>
                             <div className="col-75">
-                                <input onChange={this.onChangeEmail} type="text" id="email" name="email" placeholder="E-mail Address.." required/>
+                                <input onChange={this.onChangeEmail} value={this.state.email} type="text" id="email" name="email" placeholder="E-mail Address.." required/>
                             </div>
                         </div>
                         <div className="row">
@@ -245,7 +264,7 @@ export default class Formulary extends Component {
                                 <label for="city">Ciudad</label>
                             </div>
                             <div className="col-75">
-                                <input onChange={this.onChangeCity} type="text" id="city" name="city" placeholder="City.." required/>
+                                <input onChange={this.onChangeCity} value={this.state.city} type="text" id="city" name="city" placeholder="City.." required/>
                             </div>
                         </div>
                         <div className="row">
@@ -253,7 +272,7 @@ export default class Formulary extends Component {
                                 <label for="address">Dirección</label>
                             </div>
                             <div className="col-75">
-                                <input onChange={this.onChangeAddress} type="text" id="address" name="address" placeholder="Address.." required/>
+                                <input onChange={this.onChangeAddress} value={this.state.address} type="text" id="address" name="address" placeholder="Address.." required/>
                             </div>
                         </div>
                         <div className="row">
