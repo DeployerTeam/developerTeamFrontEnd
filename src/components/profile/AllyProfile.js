@@ -18,7 +18,8 @@ export default class AllyProfile extends Component {
       phone : null,
       companyName : "",
       city : "",
-      address : ""
+      address : "",
+      image : ""
     }
     this.obtenerProveedor = this.obtenerProveedor.bind(this);
     this.onChangeName = this.onChangeName.bind(this);
@@ -26,6 +27,7 @@ export default class AllyProfile extends Component {
     this.onChangeEmail = this.onChangeEmail.bind(this);
     this.onChangeCity = this.onChangeCity.bind(this);
     this.onChangeAddress = this.onChangeAddress.bind(this);
+    this.onChangeImage = this.onChangeImage.bind(this);
     this.actualizarProveedor = this.actualizarProveedor.bind(this);
     this.reload = this.reload.bind(this);
 
@@ -65,6 +67,12 @@ export default class AllyProfile extends Component {
     });
   }
 
+  onChangeImage(event){
+    this.setState({
+      image : event.target.value
+    });
+  }
+
   obtenerProveedor() {
     let getAlly = axios.get(API_BASE_URL_BACK + '/proveedores/' + localStorage.getItem("localEmail"))
     .then( getAlly => {
@@ -73,7 +81,8 @@ export default class AllyProfile extends Component {
         phone : getAlly.data.phone, 
         companyName : getAlly.data.name, 
         city : getAlly.data.city,
-        address : getAlly.data.address})
+        address : getAlly.data.address,
+        image : getAlly.data.image})
     })
   }
 
@@ -85,7 +94,8 @@ export default class AllyProfile extends Component {
       phone : this.state.phone,
       companyName : this.state.companyName,
       city : this.state.city,
-      address : this.state.address
+      address : this.state.address,
+      image:this.state.image,
     }
     axios.put(API_BASE_URL_BACK + '/proveedores/' + localStorage.getItem("localEmail"), ally)
       .then(async () => {
@@ -117,16 +127,19 @@ export default class AllyProfile extends Component {
   render(){
       return(
         <div className="container">
-          <div className="profilePhoto" align="center">
-            <img src= "https://brisbanevs.com/storage/app/media/ramona/vet-ple-ramona-feature-image-2.jpg" width="70%" />
+          <div className="image" align="center">
+            <img className="img-thumbnail" id="image" src={this.state.image} width="70%"></img>
             <br/>
             <br/>
             <br/>
-            <div className="file">
-              <Form.File 
-              id="custom-file"
-              label="Custom file input"
-              custom/>
+
+            <div className="row">
+                <div className="col-25">
+                    <label for="image">URL de la imagen</label>
+                </div>
+                <div className="col-75">
+                    <input type="text" id="image" name="image" placeholder="URL image" onChange={this.onChangeImage}/>
+                </div>
             </div>
             
           </div>
