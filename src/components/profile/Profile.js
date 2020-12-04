@@ -19,7 +19,8 @@ export default class Profile extends Component {
       phone : null,
       name : "",
       city : "",
-      address : ""
+      address : "",
+      image : ""
     }
     this.obtenerUsuario = this.obtenerUsuario.bind(this);
     this.onChangeName = this.onChangeName.bind(this);
@@ -29,6 +30,7 @@ export default class Profile extends Component {
     this.onChangeAddress = this.onChangeAddress.bind(this);
     this.onChangeAge = this.onChangeAge.bind(this);
     this.onChangeGender = this.onChangeGender.bind(this);
+    this.onChangeImage = this.onChangeImage.bind(this);
     this.actualizarUsuario = this.actualizarUsuario.bind(this);
     this.reload = this.reload.bind(this);
   }
@@ -79,6 +81,12 @@ export default class Profile extends Component {
     });
   }
 
+  onChangeImage(event){
+    this.setState({
+      image : event.target.value
+    });
+  }
+
   obtenerUsuario() {
     let getUser = axios.get(API_BASE_URL_BACK + '/user/' + localStorage.getItem("localEmail"))
     .then( getUser => {
@@ -89,7 +97,8 @@ export default class Profile extends Component {
         phone : getUser.data.phone, 
         name : getUser.data.name, 
         city : getUser.data.city,
-        address : getUser.data.address})
+        address : getUser.data.address,
+        image : getUser.data.image,})
     })
   }
 
@@ -103,7 +112,8 @@ export default class Profile extends Component {
       city : this.state.city,
       address : this.state.address,
       age : this.state.age,
-      gender : this.state.gender
+      gender : this.state.gender,
+      image : this.state.image,
     }
     axios.put(API_BASE_URL_BACK + '/user/' + localStorage.getItem("localEmail"), user)
       .then(async () => {
@@ -135,16 +145,19 @@ export default class Profile extends Component {
   render(){
       return(
         <div className="container">
-          <div className="profilePhoto" align="center">
-            <img src= "https://brisbanevs.com/storage/app/media/ramona/vet-ple-ramona-feature-image-2.jpg" width="70%" />
+          <div className="image" align="center">
+            <img className="img-thumbnail" id="image" src={this.state.image} width="70%"></img>
             <br/>
             <br/>
             <br/>
-            <div className="file">
-              <Form.File 
-              id="custom-file"
-              label="Custom file input"
-              custom/>
+
+            <div className="row">
+                <div className="col-25">
+                    <label for="image">URL de la imagen</label>
+                </div>
+                <div className="col-75">
+                    <input type="text" id="image" name="image" placeholder="URL image" onChange={this.onChangeImage}/>
+                </div>
             </div>
             
           </div>
