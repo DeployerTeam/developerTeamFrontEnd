@@ -128,18 +128,20 @@ export default class AllyProfile extends Component {
       return(
         <div className="container">
           <div className="image" align="center">
-            <img className="img-thumbnail" id="image" src={this.state.image} width="70%"></img>
-            <br/>
-            <br/>
-            <br/>
-
-            <div className="row">
+            <div className="profilePhoto" align="center">
+              <img src= "https://brisbanevs.com/storage/app/media/ramona/vet-ple-ramona-feature-image-2.jpg" width="70%" />
+              <br/>
+              <br/>
+              <br/>
+              <div className="row">
                 <div className="col-25">
                     <label for="image">URL de la imagen</label>
                 </div>
                 <div className="col-75">
                     <input type="text" id="image" name="image" placeholder="URL image" onChange={this.onChangeImage}/>
                 </div>
+            </div>
+              
             </div>
             
           </div>
